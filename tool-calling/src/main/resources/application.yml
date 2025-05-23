@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tool-calling
+
+  ai:
+    openai:
+      api-key: ${DASHSCOPE_API_KEY}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-max
+#    dashscope:
+#      api-key: ${DASHSCOPE_API_KEY}
+#      chat:
+#        options:
+#          model: qwen-max
+
+    toolcalling:
+      time:
+        enabled: true
+      weather:
+        enabled: true
+        api-key: ${WEATHER_API_KEY}
