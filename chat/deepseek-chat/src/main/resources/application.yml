@@ -3,8 +3,7 @@ server:
 
 spring:
   application:
-    name: openai-chat
-## todo 补充API_KEY
+    name: deepseek-chat
   ai:
     deepseek:
       api-key: ${DEEPSEEK_API_KEY}
