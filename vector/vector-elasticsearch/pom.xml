@@ -13,10 +13,6 @@
     <groupId>com.spring.ai.tutorial.vector</groupId>
     <artifactId>vector-elasticsearch</artifactId>
 
-    <properties>
-        <es.version>8.17.4</es.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

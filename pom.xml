@@ -18,6 +18,7 @@
         <module>vector/vector-simple</module>
         <module>vector/vector-elasticsearch</module>
         <module>rag/rag-simple</module>
+        <module>rag/rag-elasticsearch</module>
     </modules>
 
     <properties>
@@ -30,6 +31,7 @@
 
         <!-- Spring Boot -->
         <spring-boot.version>3.4.5</spring-boot.version>
+        <es.version>8.17.4</es.version>
 
         <!-- Spring AI Alibaba -->
         <spring-ai-alibaba.version>1.0.0.1</spring-ai-alibaba.version>
