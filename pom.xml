@@ -15,6 +15,9 @@
         <module>advisor/advisor-base</module>
         <module>tool-calling</module>
         <module>structured-output</module>
+        <module>vector/vector-simple</module>
+        <module>vector/vector-elasticsearch</module>
+        <module>rag/rag-simple</module>
     </modules>
 
     <properties>
@@ -30,7 +33,6 @@
 
         <!-- Spring AI Alibaba -->
         <spring-ai-alibaba.version>1.0.0.1</spring-ai-alibaba.version>
-
 
     </properties>
 
