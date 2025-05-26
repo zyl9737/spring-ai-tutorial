@@ -7,7 +7,7 @@
 - JDK21
 - SpringBoot3.4.5
 - SpringAI 1.0.0
-- SpringAI Alibaba 跟着最新
+- SpringAI Alibaba 1.0.0.1
 
 ### 项目目录结构
 ```text
