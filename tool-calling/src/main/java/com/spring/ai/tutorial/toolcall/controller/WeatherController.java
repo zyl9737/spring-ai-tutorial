@@ -1,6 +1,5 @@
 package com.spring.ai.tutorial.toolcall.controller;
 
-
 import com.spring.ai.tutorial.toolcall.component.weather.WeatherProperties;
 import com.spring.ai.tutorial.toolcall.component.weather.method.WeatherTools;
 import org.springframework.ai.chat.client.ChatClient;
@@ -17,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/chat/weather")
 public class WeatherController {
 
-    private final ChatClient dashScopeChatClient;
+    private final ChatClient chatClient;
 
     private final WeatherProperties weatherProperties;
 
 
     public WeatherController(ChatClient.Builder chatClientBuilder, WeatherProperties weatherProperties) {
-        this.dashScopeChatClient = chatClientBuilder.build();
+        this.chatClient = chatClientBuilder.build();
         this.weatherProperties = weatherProperties;
     }
 
@@ -32,7 +31,7 @@ public class WeatherController {
      */
     @GetMapping("/call")
     public String call(@RequestParam(value = "query", defaultValue = "请告诉我北京1天以后的天气") String query) {
-        return dashScopeChatClient.prompt(query).call().content();
+        return chatClient.prompt(query).call().content();
     }
 
     /**
@@ -40,7 +39,7 @@ public class WeatherController {
      */
     @GetMapping("/call/tool-function")
     public String callToolFunction(@RequestParam(value = "query", defaultValue = "请告诉我北京1天以后的天气") String query) {
-        return dashScopeChatClient.prompt(query).tools("getWeatherFunction").call().content();
+        return chatClient.prompt(query).toolNames("getWeatherFunction").call().content();
     }
 
     /**
@@ -48,6 +47,6 @@ public class WeatherController {
      */
     @GetMapping("/call/tool-method")
     public String callToolMethod(@RequestParam(value = "query", defaultValue = "请告诉我北京1天以后的天气") String query) {
-        return dashScopeChatClient.prompt(query).tools(new WeatherTools(weatherProperties)).call().content();
+        return chatClient.prompt(query).tools(new WeatherTools(weatherProperties)).call().content();
     }
 }

@@ -12,11 +12,6 @@ spring:
       chat:
         options:
           model: qwen-max
-#    dashscope:
-#      api-key: ${DASHSCOPE_API_KEY}
-#      chat:
-#        options:
-#          model: qwen-max
 
     toolcalling:
       time:

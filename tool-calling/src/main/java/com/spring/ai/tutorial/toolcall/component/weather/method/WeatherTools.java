@@ -1,6 +1,5 @@
 package com.spring.ai.tutorial.toolcall.component.weather.method;
 
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.ai.tutorial.toolcall.component.weather.WeatherProperties;

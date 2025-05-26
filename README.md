@@ -10,3 +10,16 @@
 - SpringBoot3.4.5
 - SpringAI 1.0.0
 - SpringAI Alibaba 跟着最新
+
+
+### 项目目录结构
+```angular2html
+chat
+    - alibaba-chat
+    - openai-chat
+    - deepseek-chat
+advisor
+    - advisor-base
+tool-calling
+structured-output
+```

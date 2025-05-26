@@ -1,15 +1,21 @@
 package com.spring.ai.tutorial.toolcall.controller;
 
 import com.spring.ai.tutorial.toolcall.component.time.method.TimeTools;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.InMemoryChatMemoryRepository;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.model.tool.ToolCallingChatOptions;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
+
+import java.util.List;
+
+import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 
 /**
  * @author yingzi
@@ -20,12 +26,21 @@ import reactor.core.publisher.Flux;
 @RequestMapping("/chat/time")
 public class TimeController {
 
-    private static final Logger logger = LoggerFactory.getLogger(TimeController.class);
-
     private final ChatClient chatClient;
+    private final InMemoryChatMemoryRepository chatMemoryRepository = new InMemoryChatMemoryRepository();
+    private final int MAX_MESSAGES = 100;
+    private final MessageWindowChatMemory messageWindowChatMemory = MessageWindowChatMemory.builder()
+            .chatMemoryRepository(chatMemoryRepository)
+            .maxMessages(MAX_MESSAGES)
+            .build();
+
 
     public TimeController(ChatClient.Builder chatClientBuilder) {
         this.chatClient = chatClientBuilder
+                .defaultAdvisors(
+                        MessageChatMemoryAdvisor.builder(messageWindowChatMemory)
+                                .build()
+                )
                 .build();
     }
 
@@ -54,42 +69,26 @@ public class TimeController {
     }
 
     /**
-     * stream 调用工具版 - method - false
+     * call 调用工具版 - method - false
      */
     @GetMapping("/call/tool-method-false")
-    public String callToolMethodFalse(@RequestParam(value = "query", defaultValue = "请告诉我现在北京时间几点了") String query) {
+    public ChatResponse callToolMethodFalse(@RequestParam(value = "query", defaultValue = "请告诉我现在北京时间几点了") String query) {
         ChatClient.CallResponseSpec call = chatClient.prompt(query).tools(new TimeTools())
+                .advisors(
+                        a -> a.param(CONVERSATION_ID, "yingzi")
+                )
                 .options(ToolCallingChatOptions.builder()
                         .internalToolExecutionEnabled(false)  // 禁用内部工具执行
                         .build()
                 )
                 .call();
-        return call.content();
+        return call.chatResponse();
     }
 
-    /**
-     * stream 调用工具版 - method
-     */
-    @GetMapping("/stream/tool-method")
-    public Flux<String> streamToolMethod(@RequestParam(value = "query", defaultValue = "请告诉我现在北京时间几点了") String query) {
-        ChatClient.StreamResponseSpec stream = chatClient.prompt(query)
-                .tools(new TimeTools())
-                .stream();
-        return stream.content();
+    @GetMapping("/messages")
+    public List<Message> messages(@RequestParam(value = "conversation_id", defaultValue = "yingzi") String conversationId) {
+        return messageWindowChatMemory.get(conversationId);
     }
 
-    /**
-     * stream 调用工具版 - method - false
-     */
-    @GetMapping("/stream/tool-method-false")
-    public Flux<String> streamToolMethodFalse(@RequestParam(value = "query", defaultValue = "请告诉我现在北京时间几点了") String query) {
-        ChatClient.StreamResponseSpec stream = chatClient.prompt(query).tools(new TimeTools())
-                .options(ToolCallingChatOptions.builder()
-                        .internalToolExecutionEnabled(false)  // 禁用内部工具执行
-                        .build()
-                )
-                .stream();
-        return stream.content();
-    }
 }
 
