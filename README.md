@@ -27,7 +27,16 @@ rag                             # rag目录
     - rag-elasticsearch             # 基于ES都的rag案例
 mcp                             # mcp目录
     - client                        # mcp client目录
+        - mcp-stdio-client              # MCP的stdio客户端案例
+        - mcp-webflux-client            # MCP的webflux客户端案例
+        - mcp-nacos2-client             # MCP基于Nacos2.*实现分布式部署客户端案例
     - server                        # mcp server目录
+        - mcp-stdio-server              # MCP的stdio服务端案例
+        - mcp-webflux-server            # MCP的webflux服务端案例
+        - mcp-nacos2-server             # MCP基于Nacos2.*实现分布式部署服务端案例
+graph                           # graph目录
+    - multipe-write                 # 多轮写作，基于人类反馈润色文章的案例
+    - deep-research                 # 深度研究产出报告案例                           
 ```
 
 
