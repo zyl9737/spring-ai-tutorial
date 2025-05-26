@@ -11,30 +11,30 @@
 
 ### 项目目录结构
 ```text
-chat                            # chat目录
+chat目录                            
     - alibaba-chat                  # 基于alibaba实现chat案例
     - openai-chat                   # 基于openai实现chat案例
     - deepseek-chat                 # 基于deepseek实现chat案例
-advisor                         # advisor目录
+advisor目录                         
     - advisor-base                  # advisor绑定内存记忆案例
-tool-calling                    # 时间、天气两个工具的function、method调用案例
-structured-output               # map、list、实例对象类型的格式化输出案例
-vector                          # vector目录
+tool-calling                        # 时间、天气两个工具的function、method调用案例
+structured-output                   # map、list、实例对象类型的格式化输出案例
+vector目录                         
     - vector-simple                 # 基于内存的向量数据库案例
     - vector-elasticsearch          # 基于ES的向量数据库案例
-rag                             # rag目录
+rag目录                             
     - rag-simple                    # 基于内存的rag案例
     - rag-elasticsearch             # 基于ES都的rag案例
-mcp                             # mcp目录
-    - client                        # mcp client目录
-        - mcp-stdio-client              # MCP的stdio客户端案例
-        - mcp-webflux-client            # MCP的webflux客户端案例
-        - mcp-nacos2-client             # MCP基于Nacos2.*实现分布式部署客户端案例
-    - server                        # mcp server目录
-        - mcp-stdio-server              # MCP的stdio服务端案例
-        - mcp-webflux-server            # MCP的webflux服务端案例
-        - mcp-nacos2-server             # MCP基于Nacos2.*实现分布式部署服务端案例
-graph                           # graph目录
+mcp目录                             
+    - client目录                        
+        - mcp-stdio-client          # MCP的stdio客户端案例
+        - mcp-webflux-client        # MCP的webflux客户端案例
+        - mcp-nacos2-client         # MCP基于Nacos2.*实现分布式部署客户端案例
+    - server目录                     
+        - mcp-stdio-server          # MCP的stdio服务端案例
+        - mcp-webflux-server        # MCP的webflux服务端案例
+        - mcp-nacos2-server         # MCP基于Nacos2.*实现分布式部署服务端案例
+graph目录                           
     - multipe-write                 # 多轮写作，基于人类反馈润色文章的案例
     - deep-research                 # 深度研究产出报告案例                           
 ```
