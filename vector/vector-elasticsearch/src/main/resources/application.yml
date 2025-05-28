@@ -21,6 +21,6 @@ spring:
         dimensions: 1536
 
   elasticsearch:
-    uris: https://127.0.0.1:9200
+    uris: http://127.0.0.1:9200
     username: elastic
     password: yingzi

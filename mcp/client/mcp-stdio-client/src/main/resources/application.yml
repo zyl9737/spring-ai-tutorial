@@ -15,5 +15,19 @@ spring:
           model: qwen-max
     mcp:
       client:
+        enabled: true
+        name: my-mcp-client
+        version: 1.0.0
+        request-timeout: 30s
+        type: SYNC  # or ASYNC for reactive applications
         stdio:
-          servers-configuration: classpath:mcp-servers.json
+          connections:
+            server1:
+              command: java
+              args:
+                - -jar
+                - /Users/guotao/IdeaProjects/spring-ai-tutorial/mcp/server/mcp-stdio-server/target/mcp-stdio-server-1.0-SNAPSHOT.jar
+                - --port=20000
+                - --mode=production
+#        stdio:
+#          servers-configuration: classpath:mcp-servers.json

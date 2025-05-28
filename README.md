@@ -46,4 +46,4 @@ graph目录
 文档地址：https://ik3te1knhq.feishu.cn/wiki/PdXhwljrZiDQ6mkmkrecBDm9nhh
 - 文档中有系列快速上手+源码解读系列的详细解释（收费），获取文档权限
 
-<img src="images/vx.png" style="width:100px">
+<img src="images/vx.png" style="width:120px">
