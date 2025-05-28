@@ -34,7 +34,7 @@ public class VectorSimpleController {
     }
 
     @GetMapping("/add")
-    public void importData() {
+    public void add() {
         logger.info("start add data");
 
         HashMap<String, Object> map = new HashMap<>();

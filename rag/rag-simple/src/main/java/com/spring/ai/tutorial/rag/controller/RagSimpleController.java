@@ -55,7 +55,6 @@ public class RagSimpleController {
         return chatClient.prompt(query).call().content();
     }
 
-
     @GetMapping("/chat-rag-advisor")
     public String chatRagAdvisor(@RequestParam(value = "query", defaultValue = "你好，请告诉我影子这个人的身份信息") String query) {
         logger.info("start chat with rag-advisor");

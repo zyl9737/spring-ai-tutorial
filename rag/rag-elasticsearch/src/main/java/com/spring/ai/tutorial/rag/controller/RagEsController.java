@@ -1,11 +1,20 @@
 package com.spring.ai.tutorial.rag.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.document.Document;
+import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;
+import org.springframework.ai.rag.generation.augmentation.ContextualQueryAugmenter;
+import org.springframework.ai.rag.retrieval.search.VectorStoreDocumentRetriever;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.elasticsearch.ElasticsearchVectorStore;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,27 +26,44 @@ import java.util.Map;
 @RequestMapping("/rag/es")
 public class RagEsController {
 
-    private final ElasticsearchVectorStore elasticsearchVectorStore;
+    private static final Logger logger = LoggerFactory.getLogger(RagEsController.class);
 
-    public RagEsController(ElasticsearchVectorStore elasticsearchVectorStore) {
+    private final ElasticsearchVectorStore elasticsearchVectorStore;
+    private final ChatClient chatClient;
+
+
+    public RagEsController(ChatClient.Builder builder, ElasticsearchVectorStore elasticsearchVectorStore) {
         this.elasticsearchVectorStore = elasticsearchVectorStore;
+        this.chatClient = builder.build();
     }
 
-    @RequestMapping("/import")
-    public void importData() {
+    @RequestMapping("/add")
+    public void add() {
+        logger.info("start add data");
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("year", 2025);
+        map.put("name", "yingzi");
         List<Document> documents = List.of(
-                new Document("Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!!", Map.of("meta1", "meta1")),
-                new Document("The World is Big and Salvation Lurks Around the Corner"),
-                new Document("You walk forward facing the past and you turn back toward the future.", Map.of("meta2", "meta2")));
+                new Document("你的姓名是影子，湖南邵阳人，25年硕士毕业于北京科技大学，曾先后在百度、理想、快手实习，曾发表过一篇自然语言处理的sci，现在是一名AI研发工程师"),
+                new Document("你的姓名是影子，专业领域包含的数学、前后端、大数据、自然语言处理", Map.of("year", 2024)),
+                new Document("你姓名是影子，爱好是发呆、思考、运动", map));
         elasticsearchVectorStore.add(documents);
     }
 
-    @RequestMapping("/search")
-    public List<Document> search() {
-        return elasticsearchVectorStore.similaritySearch(SearchRequest
-                .builder()
-                .query("Spring")
-                .topK(5)
-                .build());
+    @GetMapping("/chat-rag-advisor")
+    public String chatRagAdvisor(@RequestParam(value = "query", defaultValue = "你好，请告诉我影子这个人的身份信息") String query) {
+        logger.info("start chat with rag-advisor");
+        RetrievalAugmentationAdvisor retrievalAugmentationAdvisor = RetrievalAugmentationAdvisor.builder()
+                .documentRetriever(VectorStoreDocumentRetriever.builder()
+                        .vectorStore(elasticsearchVectorStore)
+                        .build())
+                .queryAugmenter(ContextualQueryAugmenter.builder()
+                        .allowEmptyContext(true)
+                        .build())
+                .build();
+
+        return chatClient.prompt(query)
+                .advisors(retrievalAugmentationAdvisor)
+                .call().content();
     }
 }

@@ -33,8 +33,8 @@ public class VectorEsController {
         this.elasticsearchVectorStore = elasticsearchVectorStore;
     }
 
-    @GetMapping("/import")
-    public void importData() {
+    @GetMapping("/add")
+    public void add() {
         logger.info("start import data");
 
         HashMap<String, Object> map = new HashMap<>();
@@ -59,7 +59,7 @@ public class VectorEsController {
     }
 
     @GetMapping("delete-filter")
-    public void searchFilter() {
+    public void deleteFilter() {
         logger.info("start search data with filter");
         FilterExpressionBuilder b = new FilterExpressionBuilder();
         Filter.Expression expression = b.and(
