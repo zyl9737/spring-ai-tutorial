@@ -17,6 +17,9 @@ chat目录
     - deepseek-chat                 # 基于deepseek实现chat案例
 advisor目录                         
     - advisor-base                  # advisor绑定内存记忆案例
+    - advisor-memory-sqlite         # 基于sqlite的advisor绑定内存记忆案例
+    - advisor-memory-mysql          # 基于mysql的advisor绑定内存记忆案例
+    - advisor-memory-redis          # 基于redis的advisor绑定内存记忆案例
 tool-calling                        # 时间、天气两个工具的function、method调用案例
 structured-output                   # map、list、实例对象类型的格式化输出案例
 vector目录                         
@@ -24,7 +27,7 @@ vector目录
     - vector-elasticsearch          # 基于ES的向量数据库案例
 rag目录                             
     - rag-simple                    # 基于内存的rag案例
-    - rag-elasticsearch             # 基于ES都的rag案例
+    - rag-elasticsearch             # 基于ES的rag案例
 mcp目录                             
     - client目录                        
         - mcp-stdio-client          # MCP的stdio客户端案例

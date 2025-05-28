@@ -19,6 +19,9 @@
         <module>vector/vector-elasticsearch</module>
         <module>rag/rag-simple</module>
         <module>rag/rag-elasticsearch</module>
+        <module>advisor/advisor-memory-mysql</module>
+        <module>advisor/advisor-memory-redis</module>
+        <module>advisor/advisor-memory-sqlite</module>
     </modules>
 
     <properties>
@@ -56,8 +59,10 @@
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud.ai</groupId>
-                <artifactId>spring-ai-alibaba-core</artifactId>
+                <artifactId>spring-ai-alibaba-bom</artifactId>
                 <version>${spring-ai-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

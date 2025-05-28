@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2025/5/22 22:44
  */
 @SpringBootApplication
-public class advisorBaseApplication {
+public class AdvisorBaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(advisorBaseApplication.class, args);
+        SpringApplication.run(AdvisorBaseApplication.class, args);
     }
 }

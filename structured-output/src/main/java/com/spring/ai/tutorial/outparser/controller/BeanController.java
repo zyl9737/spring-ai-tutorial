@@ -67,7 +67,6 @@ public class BeanController {
 
         Prompt prompt = promptTemplate.create();
 
-
         String result = chatClient.prompt(prompt)
                 .call().content();
 
