@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "timeServer": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "/Users/guotao/IdeaProjects/spring-ai-tutorial/mcp/server/mcp-stdio-server/target/mcp-stdio-server-1.0-SNAPSHOT.jar"
+      ]
+    }
+  }
+}

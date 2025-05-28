@@ -22,6 +22,10 @@
         <module>advisor/advisor-memory-mysql</module>
         <module>advisor/advisor-memory-redis</module>
         <module>advisor/advisor-memory-sqlite</module>
+        <module>mcp/server/mcp-webflux-server</module>
+        <module>mcp/client/mcp-webflux-client</module>
+        <module>mcp/server/mcp-stdio-server</module>
+        <module>mcp/client/mcp-stdio-client</module>
     </modules>
 
     <properties>
