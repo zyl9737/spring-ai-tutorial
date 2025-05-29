@@ -26,6 +26,7 @@
         <module>mcp/client/mcp-webflux-client</module>
         <module>mcp/server/mcp-stdio-server</module>
         <module>mcp/client/mcp-stdio-client</module>
+        <module>vector/vector-redis</module>
     </modules>
 
     <properties>

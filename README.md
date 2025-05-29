@@ -24,6 +24,7 @@ tool-calling                        # 时间、天气两个工具的function、m
 structured-output                   # map、list、实例对象类型的格式化输出案例
 vector目录                         
     - vector-simple                 # 基于内存的向量数据库案例
+    - vecotr-redis                  # 基于redis的向量数据库案例
     - vector-elasticsearch          # 基于ES的向量数据库案例
 rag目录                             
     - rag-simple                    # 基于内存的rag案例
@@ -46,4 +47,4 @@ graph目录
 文档地址：https://ik3te1knhq.feishu.cn/wiki/PdXhwljrZiDQ6mkmkrecBDm9nhh
 - 文档中有系列快速上手+源码解读系列的详细解释（收费），获取文档权限
 
-<img src="images/vx.png" style="width:120px">
+<img src="docx/vx.png" style="width:120px">

@@ -4,9 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.vectorstore.SearchRequest;
-import org.springframework.ai.vectorstore.elasticsearch.ElasticsearchVectorStore;
 import org.springframework.ai.vectorstore.filter.Filter;
 import org.springframework.ai.vectorstore.filter.FilterExpressionBuilder;
+import org.springframework.ai.vectorstore.redis.RedisVectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,23 +19,23 @@ import java.util.Map;
 
 /**
  * @author yingzi
- * @date 2025/4/15:23:09
+ * @date 2025/4/16:17:33
  */
 @RestController
-@RequestMapping("/vector/es")
-public class VectorEsController {
+@RequestMapping("/redis")
+public class RedisController {
 
-    private static final Logger logger = LoggerFactory.getLogger(VectorEsController.class);
-    private final ElasticsearchVectorStore elasticsearchVectorStore;
+    private static final Logger logger = LoggerFactory.getLogger(RedisController.class);
+    private final RedisVectorStore redisVectorStore;
 
     @Autowired
-    public VectorEsController(@Qualifier("elasticsearchVectorStore") ElasticsearchVectorStore elasticsearchVectorStore) {
-        this.elasticsearchVectorStore = elasticsearchVectorStore;
+    public RedisController(@Qualifier("redisVectorStoreCustom") RedisVectorStore redisVectorStore) {
+        this.redisVectorStore = redisVectorStore;
     }
 
     @GetMapping("/add")
     public void add() {
-        logger.info("start import data");
+        logger.info("start add data");
 
         HashMap<String, Object> map = new HashMap<>();
         map.put("id", "12345");
@@ -45,13 +45,13 @@ public class VectorEsController {
                 new Document("The World is Big and Salvation Lurks Around the Corner"),
                 new Document("You walk forward facing the past and you turn back toward the future.", Map.of("year", 2024)),
                 new Document("Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!! Spring AI rocks!!", map));
-        elasticsearchVectorStore.add(documents);
+        redisVectorStore.add(documents);
     }
 
     @GetMapping("/search")
     public List<Document> search() {
         logger.info("start search data");
-        return elasticsearchVectorStore.similaritySearch(SearchRequest
+        return redisVectorStore.similaritySearch(SearchRequest
                 .builder()
                 .query("Spring")
                 .topK(2)
@@ -63,10 +63,10 @@ public class VectorEsController {
         logger.info("start delete data with filter");
         FilterExpressionBuilder b = new FilterExpressionBuilder();
         Filter.Expression expression = b.and(
-                b.in("year", 2025, 2024),
+                b.gte("year", 2024),
                 b.eq("name", "yingzi")
         ).build();
 
-        elasticsearchVectorStore.delete(expression);
+        redisVectorStore.delete(expression);
     }
 }
