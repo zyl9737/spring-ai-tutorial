@@ -27,7 +27,7 @@ vector目录
     - vecotr-redis                  # 基于redis的向量数据库案例
     - vector-elasticsearch          # 基于ES的向量数据库案例
 rag目录                             
-    - rag-simple                    # 基于内存的rag案例
+    - rag-simple                    # 基于内存的rag效果对比、模块化rag案例
     - rag-elasticsearch             # 基于ES的rag案例
 mcp目录                             
     - client目录                        
