@@ -6,7 +6,6 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.rag.advisor.RetrievalAugmentationAdvisor;
-import org.springframework.ai.rag.generation.augmentation.ContextualQueryAugmenter;
 import org.springframework.ai.rag.retrieval.search.VectorStoreDocumentRetriever;
 import org.springframework.ai.vectorstore.SimpleVectorStore;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,9 +60,6 @@ public class RagSimpleController {
         RetrievalAugmentationAdvisor retrievalAugmentationAdvisor = RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(VectorStoreDocumentRetriever.builder()
                         .vectorStore(simpleVectorStore)
-                        .build())
-                .queryAugmenter(ContextualQueryAugmenter.builder()
-                        .allowEmptyContext(true)
                         .build())
                 .build();
 
