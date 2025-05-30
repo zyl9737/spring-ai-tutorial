@@ -27,6 +27,7 @@
         <module>mcp/server/mcp-stdio-server</module>
         <module>mcp/client/mcp-stdio-client</module>
         <module>vector/vector-redis</module>
+        <module>rag/rag-etl-pipeline</module>
     </modules>
 
     <properties>
@@ -40,9 +41,13 @@
         <!-- Spring Boot -->
         <spring-boot.version>3.4.5</spring-boot.version>
         <es.version>8.17.4</es.version>
+        <jedis.version>5.2.0</jedis.version>
+        <mysql.version>8.0.32</mysql.version>
+        <sqlite.verson>3.49.1.0</sqlite.verson>
+
 
         <!-- Spring AI Alibaba -->
-        <spring-ai-alibaba.version>1.0.0.1</spring-ai-alibaba.version>
+        <spring-ai-alibaba.version>1.0.0.2</spring-ai-alibaba.version>
 
     </properties>
 

@@ -13,10 +13,6 @@
     <groupId>com.spring.ai.tutorial.memory</groupId>
     <artifactId>advisor-memory-redis</artifactId>
 
-    <properties>
-        <jedis.version>5.2.0</jedis.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

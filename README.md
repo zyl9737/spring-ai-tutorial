@@ -28,6 +28,7 @@ vector目录
     - vector-elasticsearch          # 基于ES的向量数据库案例
 rag目录                             
     - rag-simple                    # 基于内存的rag效果对比、模块化rag案例
+    - rag-etl-pipeline              # 提取文档、转换文档、写出文档的案例   
     - rag-elasticsearch             # 基于ES的rag案例
 mcp目录                             
     - client目录                        

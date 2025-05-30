@@ -13,10 +13,6 @@
     <groupId>com.spring.ai.tutorial.advisor.memory</groupId>
     <artifactId>advisor-memory-mysql</artifactId>
 
-    <properties>
-        <mysql.version>8.0.32</mysql.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
