@@ -11,7 +11,12 @@
     </parent>
 
     <groupId>com.spring.ai.tutorial.mcp.client</groupId>
-    <artifactId>mcp-webflux-client</artifactId>
+    <artifactId>mcp-nacos2-client</artifactId>
+
+    <properties>
+        <!-- Spring AI Alibaba -->
+        <spring-ai-alibaba.version>1.0.0.3-SNAPSHOT</spring-ai-alibaba.version>
+    </properties>
 
     <dependencies>
 
@@ -23,6 +28,11 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-autoconfigure-model-chat-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud.ai</groupId>
+            <artifactId>spring-ai-alibaba-starter-nacos2-mcp-client</artifactId>
         </dependency>
 
         <dependency>

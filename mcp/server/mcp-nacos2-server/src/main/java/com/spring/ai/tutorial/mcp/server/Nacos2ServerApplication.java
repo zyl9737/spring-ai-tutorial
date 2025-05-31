@@ -9,13 +9,13 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * @author yingzi
- * @date 2025/5/28 09:25
+ * @date 2025/5/31 17:18
  */
 @SpringBootApplication
-public class StdioServerApplication {
+public class Nacos2ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StdioServerApplication.class, args);
+        SpringApplication.run(Nacos2ServerApplication.class, args);
     }
 
     @Bean

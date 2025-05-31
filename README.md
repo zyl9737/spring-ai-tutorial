@@ -34,11 +34,14 @@ mcp目录
     - client目录                        
         - mcp-stdio-client          # MCP的stdio客户端案例
         - mcp-webflux-client        # MCP的webflux客户端案例
-        - mcp-nacos2-client（待补充） # MCP基于Nacos2.*实现分布式部署客户端案例
+        - mcp-nacos2-client         # MCP基于Nacos2.*实现分布式部署客户端案例
+        - mcp-nacos3-client（待补充） # MCP基于Nacos3.*实现分布式部署客户端案例
     - server目录                     
         - mcp-stdio-server          # MCP的stdio服务端案例
         - mcp-webflux-server        # MCP的webflux服务端案例
-        - mcp-nacos2-server（待补充） # MCP基于Nacos2.*实现分布式部署服务端案例
+        - mcp-nacos2-server         # MCP基于Nacos2.*实现分布式部署服务端案例
+        - mcp-nacos3-server（待补充） # MCP基于Nacos3.*实现分布式部署服务端案例
+
 graph目录                           
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
     - deep-research（待补充）         # 深度研究产出报告案例                           

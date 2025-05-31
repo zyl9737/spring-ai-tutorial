@@ -19,7 +19,7 @@ public class WebfluxServerApplication {
     }
 
     @Bean
-    public ToolCallbackProvider weatherTools(TimeService timeService) {
+    public ToolCallbackProvider timeTools(TimeService timeService) {
         return MethodToolCallbackProvider.builder().toolObjects(timeService).build();
     }
 }

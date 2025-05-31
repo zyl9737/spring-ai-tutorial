@@ -15,10 +15,14 @@
     <file url="file://$PROJECT_DIR$/chat/deepseek-chat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos2-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos2-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-stdio-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-stdio-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-webflux-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-webflux-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/server/mcp-nacos2-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/server/mcp-nacos2-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-stdio-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-stdio-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-webflux-server/src/main/java" charset="UTF-8" />

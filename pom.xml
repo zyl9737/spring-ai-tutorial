@@ -28,6 +28,8 @@
         <module>mcp/client/mcp-stdio-client</module>
         <module>vector/vector-redis</module>
         <module>rag/rag-etl-pipeline</module>
+        <module>mcp/server/mcp-nacos2-server</module>
+        <module>mcp/client/mcp-nacos2-client</module>
     </modules>
 
     <properties>
@@ -48,7 +50,6 @@
 
         <!-- Spring AI Alibaba -->
         <spring-ai-alibaba.version>1.0.0.2</spring-ai-alibaba.version>
-
     </properties>
 
     <dependencyManagement>
