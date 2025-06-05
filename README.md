@@ -35,20 +35,24 @@ mcp目录
         - mcp-stdio-client          # MCP的stdio客户端案例
         - mcp-webflux-client        # MCP的webflux客户端案例
         - mcp-nacos2-client         # MCP基于Nacos2.*实现分布式部署客户端案例
-        - mcp-nacos3-client（待补充） # MCP基于Nacos3.*实现分布式部署客户端案例
+        - mcp-nacos3-client         # MCP基于Nacos3.*实现分布式部署客户端案例
     - server目录                     
         - mcp-stdio-server          # MCP的stdio服务端案例
         - mcp-webflux-server        # MCP的webflux服务端案例
         - mcp-nacos2-server         # MCP基于Nacos2.*实现分布式部署服务端案例
-        - mcp-nacos3-server（待补充） # MCP基于Nacos3.*实现分布式部署服务端案例
+        - mcp-nacos3-server         # MCP基于Nacos3.*实现分布式部署服务端案例
+        - mcp-dynamic-server(待补充) # MCP基于Nacos的动态restful服务端案例
+        - mcp-swagger-server(待补充) # MCP基于Swagger的restful服务端案例       
 
 graph目录                           
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
     - deep-research（待补充）         # 深度研究产出报告案例                           
 ```
 
+微信推文系列免费：https://mp.weixin.qq.com/s/AacHsoJu4-qcscll07nW3A
 
 文档地址：https://ik3te1knhq.feishu.cn/wiki/PdXhwljrZiDQ6mkmkrecBDm9nhh
 - 文档中有系列快速上手+源码解读系列的详细解释（收费），获取文档权限
+- Spring Ai Alibaba开源社区的Contributor可免费获取文档权限
 
 <img src="docx/vx.png" style="width:120px">

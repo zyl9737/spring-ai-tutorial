@@ -1,9 +1,6 @@
-server:
-  port: 121100
-
 spring:
   application:
-    name: mcp-nacos2-client
+    name: mcp-nacos3-client
   main:
     web-application-type: none
   ai:

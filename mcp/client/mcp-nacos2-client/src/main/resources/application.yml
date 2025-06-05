@@ -1,6 +1,3 @@
-server:
-  port: 121100
-
 spring:
   application:
     name: mcp-nacos2-client
