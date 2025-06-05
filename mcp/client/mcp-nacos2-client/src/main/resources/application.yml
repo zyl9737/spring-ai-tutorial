@@ -20,7 +20,6 @@ spring:
         version: 1.0.0
         request-timeout: 30s
         type: ASYNC  # or ASYNC for reactive applications
-        nacos-enabled: true
 
     alibaba:
       mcp:
