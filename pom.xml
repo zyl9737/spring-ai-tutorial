@@ -30,6 +30,8 @@
         <module>rag/rag-etl-pipeline</module>
         <module>mcp/server/mcp-nacos2-server</module>
         <module>mcp/client/mcp-nacos2-client</module>
+        <module>mcp/server/mcp-nacos3-server</module>
+        <module>mcp/client/mcp-nacos3-client</module>
     </modules>
 
     <properties>

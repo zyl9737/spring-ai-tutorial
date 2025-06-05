@@ -56,29 +56,9 @@ public class BeanController {
     }
 
     @GetMapping("/call/format")
-    public String callFormat(@RequestParam(value = "query", defaultValue = "以影子为作者，写一篇200字左右的有关人工智能诗篇") String query) {
-        String template = query + "{format}";
-
-        PromptTemplate promptTemplate = PromptTemplate.builder()
-                .template(template)
-                .variables(Map.of("format", converter.getFormat()))
-                .renderer(StTemplateRenderer.builder().build())
-                .build();
-
-        Prompt prompt = promptTemplate.create();
-
-        String result = chatClient.prompt(prompt)
-                .call().content();
-
-        log.info("result: {}", result);
-        assert result != null;
-        try {
-            BeanEntity convert = converter.convert(result);
-            log.info("反序列成功，convert: {}", convert);
-        } catch (Exception e) {
-            log.error("反序列化失败");
-        }
-        return result;
+    public BeanEntity callFormat(@RequestParam(value = "query", defaultValue = "以影子为作者，写一篇200字左右的有关人工智能诗篇") String query) {
+        return chatClient.prompt(query)
+                .call().entity(BeanEntity.class);
     }
 
 }
