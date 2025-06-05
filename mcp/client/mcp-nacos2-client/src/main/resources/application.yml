@@ -26,6 +26,7 @@ spring:
       mcp:
         nacos:
           enabled: true
+          namespace: 9ba5f1aa-b37d-493b-9057-72918a40ef35
           server-addr: 127.0.0.1:8848
           username: nacos
           password: nacos
@@ -35,6 +36,5 @@ spring:
             sse:
               connections:
                 server1:
-                  service-namespace: 9ba5f1aa-b37d-493b-9057-72918a40ef35
                   service-group: mcp-server
                   service-name: webflux-mcp-server
