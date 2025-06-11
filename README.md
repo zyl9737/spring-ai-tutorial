@@ -29,6 +29,7 @@ vector目录
 rag目录                             
     - rag-simple                    # 基于内存的rag效果对比、模块化rag案例
     - rag-etl-pipeline              # 提取文档、转换文档、写出文档的案例   
+    - rag-evaluation                # 多模型评估，模型响应结果，结合RAG的案例
     - rag-elasticsearch             # 基于ES的rag案例
 mcp目录                             
     - client目录                        
