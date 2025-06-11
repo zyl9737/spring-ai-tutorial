@@ -47,11 +47,6 @@ public class ChatModelAutoConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(ChatModelAutoConfiguration.class);
 
-
-    public ChatModelAutoConfiguration () {
-        logger.info("start load ChatModelAutoConfiguration");
-    }
-
     @Bean(name = "qwenMax")
     public DashScopeChatModel qwenMaxChatModel(RetryTemplate retryTemplate, ToolCallingManager toolCallingManager, DashScopeChatProperties chatProperties, ResponseErrorHandler responseErrorHandler, DashScopeConnectionProperties commonProperties, ObjectProvider<ObservationRegistry> observationRegistry, ObjectProvider<WebClient.Builder> webClientBuilderProvider, ObjectProvider<RestClient.Builder> restClientBuilderProvider, ObjectProvider<ChatModelObservationConvention> observationConvention, ObjectProvider<ToolExecutionEligibilityPredicate> dashscopeToolExecutionEligibilityPredicate) {
         chatProperties.getOptions().setModel("qwen-max");
