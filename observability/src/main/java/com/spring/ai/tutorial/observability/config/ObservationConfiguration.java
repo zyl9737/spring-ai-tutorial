@@ -11,13 +11,10 @@ import org.springframework.ai.chat.client.observation.ChatClientObservationConte
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.observation.ChatModelObservationContext;
 import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.document.Document;
 import org.springframework.ai.embedding.observation.EmbeddingModelObservationContext;
 import org.springframework.ai.observation.AiOperationMetadata;
 import org.springframework.ai.tool.definition.ToolDefinition;
 import org.springframework.ai.tool.observation.ToolCallingObservationContext;
-import org.springframework.ai.vectorstore.SearchRequest;
-import org.springframework.ai.vectorstore.observation.VectorStoreObservationContext;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -161,32 +158,11 @@ public class ObservationConfiguration {
 
             @Override
             public void onStart(EmbeddingModelObservationContext context) {
-                logger.info("🔧EmbeddingModelObservation start: {} - {}", context.getOperationMetadata().operationType(),
+                logger.info("📚EmbeddingModelObservation start: {} - {}", context.getOperationMetadata().operationType(),
                         context.getOperationMetadata().provider());
             }
         };
     }
 
-    /**
-     * 监听向量数据库调用
-     */
-    @Bean
-    public ObservationHandler<VectorStoreObservationContext> vectorStoreObservationContextObservationHandler() {
-        logger.info("VectorStoreObservation start");
-        return new ObservationHandler<>() {
-            @Override
-            public boolean supportsContext(Observation.Context context) {
-                return context instanceof VectorStoreObservationContext;
-            }
-
-            @Override
-            public void onStop(VectorStoreObservationContext context) {
-                SearchRequest queryRequest = context.getQueryRequest();
-                List<Document> queryResponse = context.getQueryResponse();
-                logger.info("📊VectorStoreObservation start: {} - {}", queryRequest, queryResponse);
-
-            }
-        };
-    }
 
 }

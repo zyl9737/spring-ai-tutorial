@@ -44,8 +44,8 @@ mcp目录
         - mcp-nacos3-server         # MCP基于Nacos3.*实现分布式部署服务端案例
         - mcp-dynamic-server(待补充) # MCP基于Nacos的动态restful服务端案例
         - mcp-swagger-server(待补充) # MCP基于Swagger的restful服务端案例       
-observabilty                        # ObservationHandler下的client、model、tool、embedding、vector的观测案例
-graph目录                           
+observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
+graph目录
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
     - deep-research（待补充）         # 深度研究产出报告案例                           
 ```
