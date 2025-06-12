@@ -19,7 +19,6 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -47,7 +46,7 @@ public class ChatModelAutoConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(ChatModelAutoConfiguration.class);
 
-    @Bean(name = "qwenMax")
+    @Bean(name = "qwen-max")
     public DashScopeChatModel qwenMaxChatModel(RetryTemplate retryTemplate, ToolCallingManager toolCallingManager, DashScopeChatProperties chatProperties, ResponseErrorHandler responseErrorHandler, DashScopeConnectionProperties commonProperties, ObjectProvider<ObservationRegistry> observationRegistry, ObjectProvider<WebClient.Builder> webClientBuilderProvider, ObjectProvider<RestClient.Builder> restClientBuilderProvider, ObjectProvider<ChatModelObservationConvention> observationConvention, ObjectProvider<ToolExecutionEligibilityPredicate> dashscopeToolExecutionEligibilityPredicate) {
         chatProperties.getOptions().setModel("qwen-max");
         DashScopeApi dashscopeApi = this.dashscopeChatApi(commonProperties, chatProperties, (RestClient.Builder)restClientBuilderProvider.getIfAvailable(RestClient::builder), (WebClient.Builder)webClientBuilderProvider.getIfAvailable(WebClient::builder), responseErrorHandler, "chat");
@@ -64,7 +63,7 @@ public class ChatModelAutoConfiguration {
         return DashScopeApi.builder().apiKey(resolved.apiKey()).headers(resolved.headers()).baseUrl(resolved.baseUrl()).webClientBuilder(webClientBuilder).workSpaceId(resolved.workspaceId()).restClientBuilder(restClientBuilder).responseErrorHandler(responseErrorHandler).build();
     }
 
-    @Bean(name = "qwenPlus")
+    @Bean(name = "qwen-plus")
     public DashScopeChatModel qwenPlusChatModel(RetryTemplate retryTemplate, ToolCallingManager toolCallingManager, DashScopeChatProperties chatProperties, ResponseErrorHandler responseErrorHandler, DashScopeConnectionProperties commonProperties, ObjectProvider<ObservationRegistry> observationRegistry, ObjectProvider<WebClient.Builder> webClientBuilderProvider, ObjectProvider<RestClient.Builder> restClientBuilderProvider, ObjectProvider<ChatModelObservationConvention> observationConvention, ObjectProvider<ToolExecutionEligibilityPredicate> dashscopeToolExecutionEligibilityPredicate) {
         chatProperties.getOptions().setModel("qwen-plus");
         DashScopeApi dashscopeApi = this.dashscopeChatApi(commonProperties, chatProperties, (RestClient.Builder)restClientBuilderProvider.getIfAvailable(RestClient::builder), (WebClient.Builder)webClientBuilderProvider.getIfAvailable(WebClient::builder), responseErrorHandler, "chat");

@@ -36,8 +36,8 @@ public class RagEvaluationController {
     private final DashScopeChatModel qwenMaxChatModel;
     private final DashScopeChatModel qwenPlusChatModel;
 
-    public RagEvaluationController(EmbeddingModel embeddingModel, @Qualifier("qwenMax")DashScopeChatModel qwenMaxChatModel,
-                                   @Qualifier("qwenPlus")DashScopeChatModel qwenPlusChatModel) {
+    public RagEvaluationController(EmbeddingModel embeddingModel, @Qualifier("qwen-max")DashScopeChatModel qwenMaxChatModel,
+                                   @Qualifier("qwen-plus")DashScopeChatModel qwenPlusChatModel) {
         this.simpleVectorStore = SimpleVectorStore
                 .builder(embeddingModel).build();
         this.qwenMaxChatModel = qwenMaxChatModel;
@@ -58,7 +58,7 @@ public class RagEvaluationController {
     }
 
     @GetMapping("/evalute")
-    public boolean evalute(@RequestParam(value = "query", defaultValue = "你好，请告诉我影子这个人的身份信息") String query) {
+    public String evalute(@RequestParam(value = "query", defaultValue = "你好，请告诉我影子这个人的身份信息") String query) {
         logger.info("start evalute");
         RetrievalAugmentationAdvisor retrievalAugmentationAdvisor = RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(VectorStoreDocumentRetriever.builder()
@@ -83,6 +83,6 @@ public class RagEvaluationController {
         EvaluationResponse evaluationResponse = evaluator.evaluate(evaluationRequest);
         boolean pass = evaluationResponse.isPass();
         logger.info("evalute result: {}", pass);
-        return pass;
+        return chatResponse.getResult().getOutput().getText();
     }
 }
