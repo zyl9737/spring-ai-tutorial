@@ -33,6 +33,7 @@
         <module>mcp/server/mcp-nacos3-server</module>
         <module>mcp/client/mcp-nacos3-client</module>
         <module>rag/rag-evaluation</module>
+        <module>observability</module>
     </modules>
 
     <properties>

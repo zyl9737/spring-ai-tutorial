@@ -33,6 +33,8 @@
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-webflux-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-webmvc-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/server/mcp-webmvc-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/observability/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/observability/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rag/rag-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rag/rag-elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rag/rag-etl-pipeline/src/main/java" charset="UTF-8" />
