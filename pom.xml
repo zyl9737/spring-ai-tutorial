@@ -37,6 +37,8 @@
         <module>graph/stream-node</module>
         <module>graph/human-node</module>
         <module>graph/simple</module>
+        <module>graph/mcp-node</module>
+        <module>graph/parallel-node</module>
     </modules>
 
     <properties>

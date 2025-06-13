@@ -49,7 +49,7 @@ graph目录  # 基于spring ai alibaba graph内核
     - simple                        # 最简单的graph案例
     - stream-node                   # 节点中AI模型的流式输出案例
     - human-node(待补充)             # 人类反馈中断、复原的案例
-    - parller-node(待补充)           # 多节点并行的案例
+    - paraller-node                 # 多节点并行的案例
     - mcp-node(待补充)               # 配置mcp，加强对应节点的案例
 multi-agent目录
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
