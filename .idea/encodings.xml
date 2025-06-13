@@ -15,6 +15,12 @@
     <file url="file://$PROJECT_DIR$/chat/deepseek-chat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/human-node/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/human-node/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/simple/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/simple/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/stream-node/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/stream-node/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos2-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos2-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos3-client/src/main/java" charset="UTF-8" />

@@ -34,6 +34,9 @@
         <module>mcp/client/mcp-nacos3-client</module>
         <module>rag/rag-evaluation</module>
         <module>observability</module>
+        <module>graph/stream-node</module>
+        <module>graph/human-node</module>
+        <module>graph/simple</module>
     </modules>
 
     <properties>

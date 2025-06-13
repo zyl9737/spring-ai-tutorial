@@ -45,7 +45,12 @@ mcp目录
         - mcp-dynamic-server(待补充) # MCP基于Nacos的动态restful服务端案例
         - mcp-swagger-server(待补充) # MCP基于Swagger的restful服务端案例       
 observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
-graph目录
+graph目录  # 基于spring ai alibaba graph内核
+    - simple                        # 最简单的graph案例
+    - stream-node                   # Graph的节点中AI模型的流式输出案例
+    - human-node(待补充)             # Graph中，人类反馈中断、复原的案例
+    - mcp-node(待补充)               # 配置mcp，加强对应节点的案例
+multi-agent目录
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
     - deep-research（待补充）         # 深度研究产出报告案例                           
 ```
