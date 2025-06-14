@@ -7,11 +7,12 @@ import com.alibaba.cloud.ai.graph.StateGraph;
 import com.alibaba.cloud.ai.graph.exception.GraphStateException;
 import com.alibaba.cloud.ai.graph.state.strategy.ReplaceStrategy;
 import com.spring.ai.tutorial.graph.mcp.node.McpNode;
+import com.spring.ai.tutorial.graph.mcp.tool.McpClientToolCallbackProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,12 +25,13 @@ import static com.alibaba.cloud.ai.graph.action.AsyncNodeAction.node_async;
  * @since 2025/6/13
  */
 @Configuration
+@EnableConfigurationProperties({ McpNodeProperties.class })
 public class McpGaphConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(McpGaphConfiguration.class);
 
     @Autowired
-    private ToolCallbackProvider toolCallbackProvider;
+    private McpClientToolCallbackProvider mcpClientToolCallbackProvider;
 
     @Bean
     public StateGraph mcpGraph(ChatClient.Builder chatClientBuilder) throws GraphStateException {
@@ -43,7 +45,7 @@ public class McpGaphConfiguration {
         };
 
         StateGraph stateGraph = new StateGraph(keyStrategyFactory)
-                .addNode("mcp", node_async(new McpNode(chatClientBuilder, toolCallbackProvider)))
+                .addNode("mcp", node_async(new McpNode(chatClientBuilder, mcpClientToolCallbackProvider)))
 
                 .addEdge(StateGraph.START, "mcp")
                 .addEdge("mcp", StateGraph.END);

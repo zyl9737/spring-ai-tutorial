@@ -39,7 +39,7 @@ public class ExpanderNode implements NodeAction {
         Flux<ChatResponse> chatResponseFlux = this.chatClient.prompt().user((user) -> user.text(DEFAULT_PROMPT_TEMPLATE.getTemplate()).param("number", expanderNumber).param("query", query)).stream().chatResponse();
 
         AsyncGenerator<? extends NodeOutput> generator = StreamingChatGenerator.builder()
-                .startingNode("article_llm_stream")
+                .startingNode("expander_llm_stream")
                 .startingState(state)
                 .mapResult(response -> {
                     String text = response.getResult().getOutput().getText();

@@ -2,16 +2,16 @@ package com.spring.ai.tutorial.graph.mcp.node;
 
 import com.alibaba.cloud.ai.graph.OverAllState;
 import com.alibaba.cloud.ai.graph.action.NodeAction;
-import com.spring.ai.tutorial.graph.mcp.controller.McpController;
+import com.spring.ai.tutorial.graph.mcp.tool.McpClientToolCallbackProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.tool.ToolCallback;
-import org.springframework.ai.tool.ToolCallbackProvider;
 import reactor.core.publisher.Flux;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author yingzi
@@ -25,20 +25,20 @@ public class McpNode implements NodeAction {
 
     private final ChatClient chatClient;
 
-    public McpNode(ChatClient.Builder chatClientBuilder, ToolCallbackProvider tools) {
-        ToolCallback[] toolCallbacks = tools.getToolCallbacks();
+    public McpNode(ChatClient.Builder chatClientBuilder, McpClientToolCallbackProvider mcpClientToolCallbackProvider) {
+        Set<ToolCallback> toolCallbacks = mcpClientToolCallbackProvider.findToolCallbacks("mcp-node");
         for (ToolCallback toolCallback : toolCallbacks) {
             logger.info("Mcp Node load ToolCallback: " + toolCallback.getToolDefinition().name());
         }
 
         this.chatClient = chatClientBuilder
-                .defaultToolCallbacks(toolCallbacks)
+                .defaultToolCallbacks(toolCallbacks.toArray(ToolCallback[]::new))
                 .build();
     }
 
 
     @Override
-    public Map<String, Object> apply(OverAllState state) throws Exception {
+    public Map<String, Object> apply(OverAllState state) {
         String query = state.value("query", "");
         Flux<String> streamResult = chatClient.prompt(query).stream().content();
         String result = streamResult.reduce("", (acc, item) -> acc + item).block();

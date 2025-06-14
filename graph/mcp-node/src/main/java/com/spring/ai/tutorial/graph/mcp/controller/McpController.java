@@ -8,6 +8,7 @@ import com.alibaba.cloud.ai.graph.exception.GraphStateException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,7 +33,7 @@ public class McpController {
         this.compiledGraph = stateGraph.compile();
     }
 
-    @RequestMapping("/call")
+    @GetMapping("/call")
     public Map<String, Object> call(@RequestParam(value = "query", defaultValue = "北京时间现在几点钟", required = false) String query,
                                       @RequestParam(value = "thread_id", defaultValue = "yingzi", required = false) String threadId){
         RunnableConfig runnableConfig = RunnableConfig.builder().threadId(threadId).build();

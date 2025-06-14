@@ -21,3 +21,9 @@ spring:
           connections:
             server1:
               url: http://localhost:19000
+
+    graph:
+      nodes:
+        node2servers:
+          mcp-node:
+            - server1
