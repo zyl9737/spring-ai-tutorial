@@ -22,11 +22,12 @@ public class McpNode implements NodeAction {
 
     private static final Logger logger = LoggerFactory.getLogger(McpNode.class);
 
+    private static final String NODE_NAME = "mcp-node";
 
     private final ChatClient chatClient;
 
     public McpNode(ChatClient.Builder chatClientBuilder, McpClientToolCallbackProvider mcpClientToolCallbackProvider) {
-        Set<ToolCallback> toolCallbacks = mcpClientToolCallbackProvider.findToolCallbacks("mcp-node");
+        Set<ToolCallback> toolCallbacks = mcpClientToolCallbackProvider.findToolCallbacks(NODE_NAME);
         for (ToolCallback toolCallback : toolCallbacks) {
             logger.info("Mcp Node load ToolCallback: " + toolCallback.getToolDefinition().name());
         }
