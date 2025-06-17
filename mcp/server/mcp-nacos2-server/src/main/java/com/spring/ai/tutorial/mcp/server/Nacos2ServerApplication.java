@@ -1,6 +1,6 @@
 package com.spring.ai.tutorial.mcp.server;
 
-import com.alibaba.cloud.ai.autoconfigure.mcp.server.Nacos2McpRegistryAutoConfiguration;
+import com.alibaba.cloud.ai.autoconfigure.mcp.server.Nacos2McpGatewayServerAutoConfiguration;
 import com.spring.ai.tutorial.mcp.server.service.TimeService;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.ai.tool.method.MethodToolCallbackProvider;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
  * @author yingzi
  * @date 2025/5/31 17:18
  */
-@SpringBootApplication(exclude = Nacos2McpRegistryAutoConfiguration.class)
+@SpringBootApplication(exclude = Nacos2McpGatewayServerAutoConfiguration.class)
 public class Nacos2ServerApplication {
 
     public static void main(String[] args) {
