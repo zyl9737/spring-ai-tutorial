@@ -1,12 +1,8 @@
 package com.spring.ai.tutorial.graph.node;
 
-import com.alibaba.cloud.ai.graph.NodeOutput;
 import com.alibaba.cloud.ai.graph.OverAllState;
 import com.alibaba.cloud.ai.graph.action.NodeAction;
-import com.alibaba.cloud.ai.graph.streaming.StreamingChatGenerator;
-import org.bsc.async.AsyncGenerator;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import reactor.core.publisher.Flux;
 
