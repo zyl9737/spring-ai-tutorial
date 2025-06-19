@@ -48,7 +48,7 @@ observabilty                        # ObservationHandler下的client、model、t
 graph目录  # 基于spring ai alibaba graph内核
     - simple                        # 最简单的graph案例
     - stream-node                   # 节点中AI模型的流式输出案例
-    - human-node(待补充)             # 人类反馈中断、复原的案例
+    - human-node                    # 流式返回结果，中断等待用户反馈，继续执行人类输入之后的工作案例
     - paraller-node                 # 多节点并行的案例
     - mcp-node                      # 配置指定mcp给指定node的案例
 multi-agent目录

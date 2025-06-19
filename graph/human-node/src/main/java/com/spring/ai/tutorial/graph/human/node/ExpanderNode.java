@@ -1,16 +1,19 @@
-package com.spring.ai.tutorial.graph.stream.node;
+package com.spring.ai.tutorial.graph.human.node;
 
 import com.alibaba.cloud.ai.graph.NodeOutput;
 import com.alibaba.cloud.ai.graph.OverAllState;
 import com.alibaba.cloud.ai.graph.action.NodeAction;
 import com.alibaba.cloud.ai.graph.async.AsyncGenerator;
 import com.alibaba.cloud.ai.graph.streaming.StreamingChatGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import reactor.core.publisher.Flux;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +23,8 @@ import java.util.Map;
  */
 
 public class ExpanderNode implements NodeAction {
+
+    private static final Logger logger = LoggerFactory.getLogger(ExpanderNode.class);
 
     private static final PromptTemplate DEFAULT_PROMPT_TEMPLATE = new PromptTemplate("You are an expert at information retrieval and search optimization.\nYour task is to generate {number} different versions of the given query.\n\nEach variant must cover different perspectives or aspects of the topic,\nwhile maintaining the core intent of the original query. The goal is to\nexpand the search space and improve the chances of finding relevant information.\n\nDo not explain your choices or add any other text.\nProvide the query variants separated by newlines.\n\nOriginal query: {query}\n\nQuery variants:\n");
 
@@ -32,7 +37,9 @@ public class ExpanderNode implements NodeAction {
     }
 
     @Override
-    public Map<String, Object> apply(OverAllState state) throws Exception {
+    public Map<String, Object> apply(OverAllState state) {
+        logger.info("expander node is running.");
+
         String query = state.value("query", "");
         Integer expanderNumber = state.value("expander_number", this.NUMBER);
 
@@ -48,4 +55,5 @@ public class ExpanderNode implements NodeAction {
                 }).build(chatResponseFlux);
         return Map.of("expander_content", generator);
     }
+
 }

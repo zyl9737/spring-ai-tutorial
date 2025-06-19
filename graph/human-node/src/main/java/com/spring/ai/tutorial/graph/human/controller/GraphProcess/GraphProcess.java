@@ -1,4 +1,4 @@
-package com.spring.ai.tutorial.graph.stream.controller.GraphProcess;
+package com.spring.ai.tutorial.graph.human.controller.GraphProcess;
 
 import com.alibaba.cloud.ai.graph.CompiledGraph;
 import com.alibaba.cloud.ai.graph.NodeOutput;
