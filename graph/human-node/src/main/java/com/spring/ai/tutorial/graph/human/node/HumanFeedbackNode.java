@@ -3,8 +3,6 @@ package com.spring.ai.tutorial.graph.human.node;
 import com.alibaba.cloud.ai.graph.OverAllState;
 import com.alibaba.cloud.ai.graph.StateGraph;
 import com.alibaba.cloud.ai.graph.action.NodeAction;
-import com.alibaba.cloud.ai.graph.exception.GraphRunnerException;
-import com.alibaba.cloud.ai.graph.exception.RunnableErrors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,11 +19,7 @@ public class HumanFeedbackNode implements NodeAction {
     private static final Logger logger = LoggerFactory.getLogger(HumanFeedbackNode.class);
 
     @Override
-    public Map<String, Object> apply(OverAllState state) throws GraphRunnerException {
-        if (state.humanFeedback() == null || !state.isResume()) {
-            throw RunnableErrors.subGraphInterrupt.exception("interrupt");
-        }
-
+    public Map<String, Object> apply(OverAllState state) {
         logger.info("human_feedback node is running.");
         HashMap<String, Object> resultMap = new HashMap<>();
         String nextStep = StateGraph.END;

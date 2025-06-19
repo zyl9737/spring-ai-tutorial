@@ -78,7 +78,7 @@ public class GraphHumanController {
         Map<String, Object> objectMap = new HashMap<>();
         objectMap.put("feed_back", feedBack);
 
-        state.withHumanFeedback(new OverAllState.HumanFeedback(objectMap, "human_feedback"));
+        state.withHumanFeedback(new OverAllState.HumanFeedback(objectMap, ""));
 
         // Create a unicast sink to emit ServerSentEvents
         Sinks.Many<ServerSentEvent<String>> sink = Sinks.many().unicast().onBackpressureBuffer();
