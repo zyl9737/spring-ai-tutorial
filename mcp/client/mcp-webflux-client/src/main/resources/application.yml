@@ -23,4 +23,6 @@ spring:
         sse:
           connections:
             server1:
-              url: http://localhost:19000
+              url: http://localhost:19000 # 本地
+#            server2:
+#              url: https://mcp.amap.com?key=xxx # 远程高德MCP服务
