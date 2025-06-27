@@ -55,11 +55,9 @@ multi-agent目录
     - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
     - deep-research（待补充）         # 深度研究产出报告案例                           
 ```
+视频讲解地址：[B站-视频讲解](https://www.bilibili.com/video/BV17NMsziEqp?vd_source=8393ba8b4463e2acda959f2ff2c792f6&spm_id_from=333.788.videopod.sections)
+微信推文系列：[微信推文版](https://mp.weixin.qq.com/s/9iLebKR8HNwalOVeDz5PXQ)
+飞书云文档：[飞书云文档版-最新教程](https://ik3te1knhq.feishu.cn/wiki/WVirwu30Xik0WXks7HGcB6E2nA8)
 
-微信推文系列免费：https://mp.weixin.qq.com/s/AacHsoJu4-qcscll07nW3A
-
-文档地址：https://ik3te1knhq.feishu.cn/wiki/PdXhwljrZiDQ6mkmkrecBDm9nhh
-- 文档中有系列快速上手+源码解读系列的详细解释（收费），获取文档权限
-- Spring Ai Alibaba开源社区的Contributor可免费获取文档权限
-
+关注后，可加入交流群
 <img src="docx/vx.png" style="width:120px">
