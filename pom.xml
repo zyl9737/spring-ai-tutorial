@@ -39,6 +39,9 @@
         <module>graph/simple</module>
         <module>graph/mcp-node</module>
         <module>graph/parallel-node</module>
+        <module>mcp/client/mcp-auth-client</module>
+        <module>mcp/server/mcp-auth-server</module>
+        <module>other/restful</module>
     </modules>
 
     <properties>

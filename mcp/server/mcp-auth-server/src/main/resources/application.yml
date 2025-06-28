@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: mcp-webflux-server
+    name: mcp-auth-server
   ai:
     mcp:
       server:
@@ -17,6 +17,7 @@ spring:
           resource: true
           prompt: true
           completion: true
+
 # 调试日志
 logging:
   level:

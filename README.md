@@ -37,11 +37,13 @@ mcp目录
         - mcp-webflux-client        # MCP的webflux客户端案例
         - mcp-nacos2-client         # MCP基于Nacos2.*实现分布式部署客户端案例
         - mcp-nacos3-client         # MCP基于Nacos3.*实现分布式部署客户端案例
+        - mcp-auth-client           # MCP基于请求头的授权客户端
     - server目录                     
         - mcp-stdio-server          # MCP的stdio服务端案例
         - mcp-webflux-server        # MCP的webflux服务端案例
         - mcp-nacos2-server         # MCP基于Nacos2.*实现分布式部署服务端案例
         - mcp-nacos3-server         # MCP基于Nacos3.*实现分布式部署服务端案例
+        - mcp-auth-server           # MCP基于请求头的授权服务端
         - mcp-dynamic-server(待补充) # MCP基于Nacos的动态restful服务端案例
         - mcp-swagger-server(待补充) # MCP基于Swagger的restful服务端案例       
 observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
@@ -51,9 +53,8 @@ graph目录  # 基于spring ai alibaba graph内核
     - human-node                    # 流式返回结果，中断等待用户反馈，继续执行人类输入之后的工作案例
     - paraller-node                 # 多节点并行的案例
     - mcp-node                      # 配置指定mcp给指定node的案例
-multi-agent目录
-    - multipe-write（待补充）         # 多轮写作，基于人类反馈润色文章的案例
-    - deep-research（待补充）         # 深度研究产出报告案例                           
+other目录
+    - restful服务                    # 提供接口调用服务，模拟存量接口                      
 ```
 
 微信推文系列免费：https://mp.weixin.qq.com/s/AacHsoJu4-qcscll07nW3A

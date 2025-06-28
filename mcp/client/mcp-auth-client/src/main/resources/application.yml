@@ -1,9 +1,9 @@
 server:
-  port: 19100
+  port: 19101
 
 spring:
   application:
-    name: mcp-webflux-client
+    name: mcp-auth-client
   main:
     web-application-type: none
   ai:
@@ -24,5 +24,6 @@ spring:
           connections:
             server1:
               url: http://localhost:19000 # 本地
-#            server2:
-#              url: https://mcp.amap.com?key=xxx # 远程高德MCP服务
+              headers:
+                token-yingzi-1: yingzi-1
+                token-yingzi-2: yingzi-2
