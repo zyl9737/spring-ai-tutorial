@@ -1,7 +1,6 @@
 package com.spring.ai.tutorial.mcp.server;
 
 import com.spring.ai.tutorial.mcp.server.parse.ParseRestful;
-import org.springframework.ai.mcp.McpRestfulToolCallbackProvider;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -40,11 +40,9 @@ public record Parameter(String parameteNname,
             return this;
         }
 
-
         public Parameter build() {
             return new Parameter(parameteNname, description, required, type);
         }
-
 
     }
 
