@@ -12,8 +12,8 @@
 ### 项目目录结构
 ```text
 chat目录                            
-    - alibaba-chat                  # 基于alibaba实现chat案例
-    - openai-chat                   # 基于openai实现chat案例
+    - alibaba-chat                      # 基于alibaba实现chat案例
+    - openai-chat                       # 基于openai实现chat案例
     - deepseek-chat                 # 基于deepseek实现chat案例
 advisor目录                         
     - advisor-base                  # advisor绑定内存记忆案例
@@ -38,14 +38,15 @@ mcp目录
         - mcp-nacos2-client         # MCP基于Nacos2.*实现分布式部署客户端案例
         - mcp-nacos3-client         # MCP基于Nacos3.*实现分布式部署客户端案例
         - mcp-auth-client           # MCP基于请求头的授权客户端
+        - mcp-nacos-parse-swagger-server
     - server目录                     
-        - mcp-stdio-server          # MCP的stdio服务端案例
-        - mcp-webflux-server        # MCP的webflux服务端案例
-        - mcp-nacos2-server         # MCP基于Nacos2.*实现分布式部署服务端案例
-        - mcp-nacos3-server         # MCP基于Nacos3.*实现分布式部署服务端案例
-        - mcp-auth-server           # MCP基于请求头的授权服务端
-        - mcp-dynamic-server(待补充) # MCP基于Nacos的动态restful服务端案例
-        - mcp-swagger-server(待补充) # MCP基于Swagger的restful服务端案例       
+        - mcp-stdio-server                      # MCP的stdio服务端案例
+        - mcp-webflux-server                    # MCP的webflux服务端案例
+        - mcp-nacos2-server                     # MCP基于Nacos2.*实现分布式部署服务端案例
+        - mcp-nacos3-server                     # MCP基于Nacos3.*实现分布式部署服务端案例
+        - mcp-auth-server                       # MCP基于请求头的授权服务端
+        - mcp-dynamic-server(待补充)             # MCP基于Nacos的动态restful服务端案例
+        - mcp-nacos-parse-swagger-server(待补充) # MCP基于nacos动态解析swagger的restful服务端案例       
 observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
 graph目录  # 基于spring ai alibaba graph内核
     - simple                        # 最简单的graph案例
@@ -54,7 +55,8 @@ graph目录  # 基于spring ai alibaba graph内核
     - paraller-node                 # 多节点并行的案例
     - mcp-node                      # 配置指定mcp给指定node的案例
 other目录
-    - restful服务                    # 提供接口调用服务，模拟存量接口                      
+    - restful服务                           # 提供接口调用服务，模拟存量接口
+    - nacos-swagger-restful(待补充)         # 基于nacos+swagger的restful服务案例                      
 ```
 视频讲解地址：[B站-视频讲解](https://www.bilibili.com/video/BV17NMsziEqp?vd_source=8393ba8b4463e2acda959f2ff2c792f6&spm_id_from=333.788.videopod.sections)
 
