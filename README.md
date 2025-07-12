@@ -45,7 +45,7 @@ mcp目录
         - mcp-nacos2-server                     # MCP基于Nacos2.*实现分布式部署服务端案例
         - mcp-nacos3-server                     # MCP基于Nacos3.*实现分布式部署服务端案例
         - mcp-auth-server                       # MCP基于请求头的授权服务端
-        - mcp-gateway-server(待补充)             # SAA的gateway服务零代码实现存量应用转换MCP案例
+        - mcp-gateway-server                    # SAA的gateway服务零代码实现存量应用转换MCP案例
         - mcp-nacos-parse-swagger-server(待补充) # MCP基于nacos动态解析swagger的restful服务端案例       
 observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
 graph目录  # 基于spring ai alibaba graph内核
