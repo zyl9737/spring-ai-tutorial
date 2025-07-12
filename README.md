@@ -7,7 +7,7 @@
 - JDK21
 - SpringBoot3.4.5
 - SpringAI 1.0.0
-- SpringAI Alibaba 1.0.0.2
+- SpringAI Alibaba(SAA) 1.0.0.2
 
 ### 项目目录结构
 ```text
@@ -45,7 +45,7 @@ mcp目录
         - mcp-nacos2-server                     # MCP基于Nacos2.*实现分布式部署服务端案例
         - mcp-nacos3-server                     # MCP基于Nacos3.*实现分布式部署服务端案例
         - mcp-auth-server                       # MCP基于请求头的授权服务端
-        - mcp-dynamic-server(待补充)             # MCP基于Nacos的动态restful服务端案例
+        - mcp-gateway-server(待补充)             # SAA的gateway服务零代码实现存量应用转换MCP案例
         - mcp-nacos-parse-swagger-server(待补充) # MCP基于nacos动态解析swagger的restful服务端案例       
 observabilty                        # ObservationHandler下的client、model、tool、embedding的观测案例
 graph目录  # 基于spring ai alibaba graph内核
@@ -56,7 +56,8 @@ graph目录  # 基于spring ai alibaba graph内核
     - mcp-node                      # 配置指定mcp给指定node的案例
 other目录
     - restful服务                           # 提供接口调用服务，模拟存量接口
-    - nacos-swagger-restful(待补充)         # 基于nacos+swagger的接口                      
+    - nacos-swagger-restful(待补充)         # 基于nacos+swagger的接口
+    - nacos-restful                        # 基于nacos3.*的接口    
 ```
 视频讲解地址：[B站-视频讲解](https://www.bilibili.com/video/BV17NMsziEqp?vd_source=8393ba8b4463e2acda959f2ff2c792f6&spm_id_from=333.788.videopod.sections)
 
