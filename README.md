@@ -14,7 +14,7 @@
 chat目录                            
     - alibaba-chat                      # 基于alibaba实现chat案例
     - openai-chat                       # 基于openai实现chat案例
-    - deepseek-chat                 # 基于deepseek实现chat案例
+    - deepseek-chat                     # 基于deepseek实现chat案例
 advisor目录                         
     - advisor-base                  # advisor绑定内存记忆案例
     - advisor-memory-sqlite         # 基于sqlite的advisor绑定内存记忆案例
@@ -56,7 +56,7 @@ graph目录  # 基于spring ai alibaba graph内核
     - mcp-node                      # 配置指定mcp给指定node的案例
 other目录
     - restful服务                           # 提供接口调用服务，模拟存量接口
-    - nacos-swagger-restful(待补充)         # 基于nacos+swagger的restful服务案例                      
+    - nacos-swagger-restful(待补充)         # 基于nacos+swagger的接口                      
 ```
 视频讲解地址：[B站-视频讲解](https://www.bilibili.com/video/BV17NMsziEqp?vd_source=8393ba8b4463e2acda959f2ff2c792f6&spm_id_from=333.788.videopod.sections)
 

@@ -27,8 +27,6 @@ public class RestfulToolCallback implements ToolCallback {
     private static final Logger logger = LoggerFactory.getLogger(RestfulToolCallback.class);
     private final RestfulToolDefinition toolDefinition;
     private final WebClient webClient;
-    private Map<String, String> headersMap;
-
 
     public RestfulToolCallback(ToolDefinition toolDefinition) {
         Assert.notNull(toolDefinition, "toolDefinition cannot be null");
@@ -53,7 +51,7 @@ public class RestfulToolCallback implements ToolCallback {
 
         NamingService namingService = ApplicationContextUtil.getBean(NamingService.class);
 
-        String path = toolDefinition.methodName2Path().get(toolDefinition.name());
+        String path = toolDefinition.path();
         Map<String, Object> toolArguments = extractToolArguments(toolInput);
 
         StringBuilder uriBuilder = new StringBuilder().append(path).append("?");
@@ -82,11 +80,6 @@ public class RestfulToolCallback implements ToolCallback {
         logger.info("Calling restful service: {}", url);
         String restfulResult = webClient.get()
                 .uri(url)
-                .headers(headers -> {
-                    if (this.headersMap != null) {
-                        this.headersMap.forEach(headers::add);
-                    }
-                })
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
@@ -94,10 +87,6 @@ public class RestfulToolCallback implements ToolCallback {
         logger.debug("Successful execution of tool: {}", this.toolDefinition.name());
         assert restfulResult != null;
         return restfulResult;
-    }
-
-    public void setHeadersMap(Map<String, String> headersMap) {
-        this.headersMap = headersMap;
     }
 
     private Map<String, Object> extractToolArguments(String toolInput) {

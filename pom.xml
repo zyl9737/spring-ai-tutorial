@@ -44,6 +44,8 @@
         <module>other/restful</module>
         <module>other/nacos-swagger-restfult</module>
         <module>mcp/server/mcp-nacos-parse-swagger-server</module>
+        <module>mcp/server/mcp-gateway-server</module>
+        <module>other/nacos-restful</module>
     </modules>
 
     <properties>
