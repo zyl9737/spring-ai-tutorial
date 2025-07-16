@@ -31,13 +31,11 @@ spring:
           stop: 10s
 
 # 打印日志
-## debug级别
 logging:
   level:
     com:
       alibaba:
         cloud:
           ai:
-            autoconfigure:
-              mcp:
-                client: DEBUG
+            mcp:
+              client: DEBUG

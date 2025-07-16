@@ -40,11 +40,11 @@
             <artifactId>spring-ai-starter-mcp-client-webflux</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud.ai</groupId>-->
-<!--            <artifactId>spring-ai-alibaba-starter-mcp-recovery-client</artifactId>-->
-<!--            <version>${spring-ai-alibaba.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud.ai</groupId>
+            <artifactId>spring-ai-alibaba-starter-mcp-recovery-client</artifactId>
+            <version>${spring-ai-alibaba.version}</version>
+        </dependency>
 
     </dependencies>
 
