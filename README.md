@@ -6,7 +6,7 @@
 版本：
 - JDK21
 - SpringBoot3.4.5
-- SpringAI 1.0.0
+- SpringAI 1.0.1
 - SpringAI Alibaba(SAA) 1.0.0.2
 
 ### 项目目录结构
@@ -39,6 +39,7 @@ mcp目录
         - mcp-nacos3-client                 # MCP基于Nacos3.*实现分布式部署客户端案例
         - mcp-auth-client                   # MCP基于请求头的授权客户端
         - mcp-recovery-client               # MCP的SSE连接断开，自动重连案例
+        - mcp-return-dirct-client           # MCP的结果直接返回给客户端案例
         - mcp-nacos-parse-swagger-server
     - server目录                     
         - mcp-stdio-server                      # MCP的stdio服务端案例

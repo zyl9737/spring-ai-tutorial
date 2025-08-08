@@ -35,6 +35,8 @@
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-nacos3-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-recovery-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-recovery-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/client/mcp-return-direct-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mcp/client/mcp-return-direct-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-stdio-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-stdio-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mcp/client/mcp-webflux-client/src/main/java" charset="UTF-8" />
