@@ -49,6 +49,8 @@
         <module>mcp/client/mcp-recovery-client</module>
         <module>mcp/client/mcp-dynamic-tool-client</module>
         <module>mcp/client/mcp-return-direct-client</module>
+        <module>graph/observe-langfuse</module>
+        <module>mcp/client/mcp-streamable-client</module>
     </modules>
 
     <properties>

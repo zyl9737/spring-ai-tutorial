@@ -40,6 +40,7 @@ mcp目录
         - mcp-auth-client                   # MCP基于请求头的授权客户端
         - mcp-recovery-client               # MCP的SSE连接断开，自动重连案例
         - mcp-return-dirct-client           # MCP的结果直接返回给客户端案例
+        - mcp-streamable-client(待补充)      # MCP的Streamable客户端案例
         - mcp-nacos-parse-swagger-server
     - server目录                     
         - mcp-stdio-server                      # MCP的stdio服务端案例
@@ -56,6 +57,7 @@ graph目录  # 基于spring ai alibaba graph内核
     - human-node                    # 流式返回结果，中断等待用户反馈，继续执行人类输入之后的工作案例
     - paraller-node                 # 多节点并行的案例
     - mcp-node                      # 配置指定mcp给指定node的案例
+    - observe-langfuse(待补充)       # 基于langfuse观测graph案例
 other目录
     - restful服务                           # 提供接口调用服务，模拟存量接口
     - nacos-swagger-restful(待补充)         # 基于nacos+swagger的接口
