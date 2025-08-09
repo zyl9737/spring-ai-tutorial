@@ -25,13 +25,13 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/graph")
-public class LangfuseGraphController {
+public class SimpleGraphController {
 
-    private static final Logger logger = LoggerFactory.getLogger(LangfuseGraphController.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleGraphController.class);
 
     private final CompiledGraph compiledGraph;
 
-    public LangfuseGraphController(@Qualifier("simpleGraph") StateGraph stateGraph, CompileConfig observationCompileConfig) throws GraphStateException {
+    public SimpleGraphController(@Qualifier("simpleGraph") StateGraph stateGraph, CompileConfig observationCompileConfig) throws GraphStateException {
         this.compiledGraph = stateGraph.compile(observationCompileConfig);
     }
 
