@@ -28,8 +28,6 @@
         <module>mcp/client/mcp-stdio-client</module>
         <module>vector/vector-redis</module>
         <module>rag/rag-etl-pipeline</module>
-        <module>mcp/server/mcp-nacos2-server</module>
-        <module>mcp/client/mcp-nacos2-client</module>
         <module>mcp/server/mcp-nacos3-server</module>
         <module>mcp/client/mcp-nacos3-client</module>
         <module>rag/rag-evaluation</module>
@@ -46,11 +44,11 @@
         <module>mcp/server/mcp-nacos-parse-swagger-server</module>
         <module>mcp/server/mcp-gateway-server</module>
         <module>other/nacos-restful</module>
-        <module>mcp/client/mcp-recovery-client</module>
         <module>mcp/client/mcp-dynamic-tool-client</module>
         <module>mcp/client/mcp-return-direct-client</module>
         <module>graph/observe-langfuse</module>
         <module>mcp/client/mcp-streamable-client</module>
+        <module>mcp/client/mcp-recovery-client</module>
     </modules>
 
     <properties>
@@ -69,7 +67,7 @@
         <sqlite.verson>3.49.1.0</sqlite.verson>
 
         <!-- Spring AI Alibaba -->
-        <spring-ai-alibaba.version>1.0.0.2</spring-ai-alibaba.version>
+        <spring-ai-alibaba.version>1.0.0.3</spring-ai-alibaba.version>
     </properties>
 
     <dependencyManagement>

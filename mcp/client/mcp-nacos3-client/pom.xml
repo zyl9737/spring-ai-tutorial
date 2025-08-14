@@ -13,10 +13,6 @@
     <groupId>com.spring.ai.tutorial.mcp.client</groupId>
     <artifactId>mcp-nacos3-client</artifactId>
 
-    <properties>
-        <!-- Spring AI Alibaba -->
-        <spring-ai-alibaba.version>1.0.0.3-SNAPSHOT</spring-ai-alibaba.version>
-    </properties>
 
     <dependencies>
 
@@ -32,8 +28,7 @@
 
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-starter-nacos-mcp-client</artifactId>
-            <version>${spring-ai-alibaba.version}</version>
+            <artifactId>spring-ai-alibaba-starter-mcp-registry</artifactId>
         </dependency>
 
         <dependency>

@@ -13,16 +13,10 @@
     <groupId>com.spring.ai.tutorial.mcp.server</groupId>
     <artifactId>mcp-nacos3-server</artifactId>
 
-    <properties>
-        <!-- Spring AI Alibaba -->
-        <spring-ai-alibaba.version>1.0.0.3-SNAPSHOT</spring-ai-alibaba.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-starter-nacos-mcp-server</artifactId>
-            <version>${spring-ai-alibaba.version}</version>
+            <artifactId>spring-ai-alibaba-starter-mcp-registry</artifactId>
         </dependency>
 
         <!-- MCP Server WebFlux 支持（也可换成 WebMvc） -->

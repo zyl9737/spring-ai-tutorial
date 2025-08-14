@@ -5,9 +5,9 @@
 
 版本：
 - JDK21
-- SpringBoot3.4.5
+- SpringBoot 3.4.5
 - SpringAI 1.0.1
-- SpringAI Alibaba(SAA) 1.0.0.2
+- SpringAI Alibaba(SAA) 1.0.0.3
 
 ### 项目目录结构
 ```text
@@ -35,7 +35,6 @@ mcp目录
     - client目录                        
         - mcp-stdio-client                  # MCP的stdio客户端案例
         - mcp-webflux-client                # MCP的webflux客户端案例
-        - mcp-nacos2-client                 # MCP基于Nacos2.*实现分布式部署客户端案例
         - mcp-nacos3-client                 # MCP基于Nacos3.*实现分布式部署客户端案例
         - mcp-auth-client                   # MCP基于请求头的授权客户端
         - mcp-recovery-client               # MCP的SSE连接断开，自动重连案例
@@ -45,7 +44,6 @@ mcp目录
     - server目录                     
         - mcp-stdio-server                      # MCP的stdio服务端案例
         - mcp-webflux-server                    # MCP的webflux服务端案例
-        - mcp-nacos2-server                     # MCP基于Nacos2.*实现分布式部署服务端案例
         - mcp-nacos3-server                     # MCP基于Nacos3.*实现分布式部署服务端案例
         - mcp-auth-server                       # MCP基于请求头的授权服务端
         - mcp-gateway-server                    # SAA的gateway服务零代码实现存量应用转换MCP案例

@@ -19,6 +19,9 @@ spring:
           resource: true
           prompt: true
           completion: true
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+
     alibaba:
       mcp:
         nacos:
@@ -26,7 +29,7 @@ spring:
           server-addr: 127.0.0.1:8848
           username: nacos
           password: nacos
-          registry:
+          register:
             enabled: true
             service-group: mcp-server
             service-name: webflux-mcp-server
