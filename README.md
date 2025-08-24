@@ -17,6 +17,7 @@ chat目录
     - deepseek-chat                     # 基于deepseek实现chat案例
 advisor目录                         
     - advisor-base                  # advisor绑定内存记忆案例
+    - advisor-deep-think            # 基于advisor的深度思考案例
     - advisor-memory-sqlite         # 基于sqlite的advisor绑定内存记忆案例
     - advisor-memory-mysql          # 基于mysql的advisor绑定内存记忆案例
     - advisor-memory-redis          # 基于redis的advisor绑定内存记忆案例
@@ -39,7 +40,6 @@ mcp目录
         - mcp-auth-client                   # MCP基于请求头的授权客户端
         - mcp-recovery-client               # MCP的SSE连接断开，自动重连案例
         - mcp-return-dirct-client           # MCP的结果直接返回给客户端案例
-        - mcp-streamable-client(待补充)      # MCP的Streamable客户端案例
         - mcp-nacos-parse-swagger-server
     - server目录                     
         - mcp-stdio-server                      # MCP的stdio服务端案例

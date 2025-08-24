@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/mcp/client/mcp-streamable-client/pom.xml" />
         <option value="$PROJECT_DIR$/mcp/server/mcp-webmvc-server/pom.xml" />
         <option value="$PROJECT_DIR$/rag/rag-evalution/pom.xml" />
       </set>

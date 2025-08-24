@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/advisor/advisor-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advisor/advisor-base/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/advisor/advisor-deep-think/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/advisor/advisor-deep-think/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advisor/advisor-memory-mysql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advisor/advisor-memory-mysql/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advisor/advisor-memory-redis/src/main/java" charset="UTF-8" />
