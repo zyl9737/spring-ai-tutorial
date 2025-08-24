@@ -56,6 +56,9 @@ graph目录  # 基于spring ai alibaba graph内核
     - paraller-node                 # 多节点并行的案例
     - mcp-node                      # 配置指定mcp给指定node的案例
     - observe-langfuse(待补充)       # 基于langfuse观测graph案例
+    agent目录
+        - react-agent               # 基于时间工具的React Agent案例
+        - reflection-agent          # 基于反思机制的Reflection Agent案例
 other目录
     - restful服务                           # 提供接口调用服务，模拟存量接口
     - nacos-swagger-restful(待补充)         # 基于nacos+swagger的接口

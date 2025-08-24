@@ -7,11 +7,11 @@
         <groupId>com.spring.ai.tutorial</groupId>
         <artifactId>spring-ai-tutorial</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.spring.ai.tutorial.graph</groupId>
-    <artifactId>simple</artifactId>
+    <groupId>com.spring.ai.tutorial.graph.agent</groupId>
+    <artifactId>reflection-agent</artifactId>
 
     <dependencies>
 

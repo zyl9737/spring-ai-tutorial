@@ -17,6 +17,10 @@
     <file url="file://$PROJECT_DIR$/chat/deepseek-chat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat/openai-chat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/agent/react-agent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/agent/react-agent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/agent/reflection-agent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/graph/agent/reflection-agent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/graph/human-node/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/graph/human-node/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/graph/mcp-node/src/main/java" charset="UTF-8" />
