@@ -4,10 +4,11 @@ import com.alibaba.cloud.ai.graph.CompiledGraph;
 import com.alibaba.cloud.ai.graph.GraphRepresentation;
 import com.alibaba.cloud.ai.graph.agent.ReactAgent;
 import com.alibaba.cloud.ai.graph.exception.GraphStateException;
+import com.spring.ai.tutorial.graph.agent.node.ExpanderNode;
+import com.spring.ai.tutorial.graph.agent.node.TranslateNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.tool.resolution.ToolCallbackResolver;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -32,6 +33,8 @@ public class ReactConfiguration {
                 .name("React Agent Demo")
                 .chatClient(chatClient)
                 .resolver(resolver)
+//                .preLlmHook(new TranslateNode(chatClientBuilder))
+//                .postLlmHook(new ExpanderNode(chatClientBuilder))
                 .maxIterations(10)
                 .build();
     }
