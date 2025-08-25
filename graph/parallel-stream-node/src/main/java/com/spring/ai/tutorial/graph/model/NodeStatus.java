@@ -17,9 +17,9 @@ public enum NodeStatus {
 
     String desc;
 
-    NodeStatus(String running, String 运行中) {
+    NodeStatus(String running, String desc) {
         this.code = running;
-        this.desc = 运行中;
+        this.desc = desc;
     }
 
 }
