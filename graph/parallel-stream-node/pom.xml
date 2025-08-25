@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.spring.ai.tutorial.graph</groupId>
-    <artifactId>stream-node</artifactId>
+    <artifactId>parallel-stream-node</artifactId>
 
     <dependencies>
 

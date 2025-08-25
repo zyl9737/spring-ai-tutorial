@@ -54,6 +54,7 @@ graph目录  # 基于spring ai alibaba graph内核
     - stream-node                   # 节点中AI模型的流式输出案例
     - human-node                    # 流式返回结果，中断等待用户反馈，继续执行人类输入之后的工作案例
     - paraller-node                 # 多节点并行的案例
+    - parallel-stream-node          # 多节点并行的流式输出案例
     - mcp-node                      # 配置指定mcp给指定node的案例
     - observe-langfuse(待补充)       # 基于langfuse观测graph案例
     agent目录

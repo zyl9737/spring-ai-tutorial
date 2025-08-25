@@ -51,6 +51,7 @@
         <module>advisor/advisor-deep-think</module>
         <module>graph/agent/react-agent</module>
         <module>graph/agent/reflection-agent</module>
+        <module>graph/parallel-stream-node</module>
     </modules>
 
     <properties>
