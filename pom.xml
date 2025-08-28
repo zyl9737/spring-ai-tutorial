@@ -52,6 +52,7 @@
         <module>graph/agent/react-agent</module>
         <module>graph/agent/reflection-agent</module>
         <module>graph/parallel-stream-node</module>
+        <module>chat/chat-setting</module>
     </modules>
 
     <properties>
