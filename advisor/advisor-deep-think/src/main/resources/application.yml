@@ -11,4 +11,3 @@ spring:
       chat:
         options:
           model: qwq-plus
-          enable_thinking: true
