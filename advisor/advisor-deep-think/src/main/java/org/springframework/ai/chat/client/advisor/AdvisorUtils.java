@@ -1,14 +1,14 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package org.springframework.ai.chat.client.advisor;
 
-import java.util.function.Predicate;
 import org.springframework.ai.chat.client.ChatClientResponse;
 import org.springframework.ai.chat.model.ChatResponse;
-import org.springframework.util.StringUtils;
+
+import java.util.function.Predicate;
+
+/**
+ * @author yingzi
+ * @since 2025/9/1
+ */
 
 public final class AdvisorUtils {
     private AdvisorUtils() {
