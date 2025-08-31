@@ -49,7 +49,6 @@ public class ReasoningContentAdvisor implements BaseAdvisor {
 
         logger.debug(String.valueOf(resp.getResults().get(0).getOutput().getMetadata()));
         String reasoningContent = String.valueOf(resp.getResults().get(0).getOutput().getMetadata().get("reasoningContent"));
-        logger.info("reasoningContent: " + reasoningContent);
 
         if (StringUtils.hasText(reasoningContent)) {
             List<Generation> thinkGenerations = resp.getResults().stream()
