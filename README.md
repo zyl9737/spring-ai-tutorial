@@ -22,12 +22,14 @@ advisor目录
     - advisor-memory-sqlite         # 基于sqlite的advisor绑定内存记忆案例
     - advisor-memory-mysql          # 基于mysql的advisor绑定内存记忆案例
     - advisor-memory-redis          # 基于redis的advisor绑定内存记忆案例
+    - advisor-memory-mem0(待补充)    # 基于mem0的advisor绑定内存记忆案例
 tool-calling                        # 时间、天气两个工具的Method版、Function版实现、internalToolExecutionEnabled、returnDirect设置
 structured-output                   # map、list、实例对象类型的格式化输出案例
 vector目录                         
     - vector-simple                 # 基于内存的向量数据库案例
     - vecotr-redis                  # 基于redis的向量数据库案例
     - vector-elasticsearch          # 基于ES的向量数据库案例
+    - vector-pgvector               # 基于pgvector的向量数据库案例
 rag目录                             
     - rag-simple                    # 基于内存的rag效果对比、模块化rag案例
     - rag-etl-pipeline              # 提取文档、转换文档、写出文档的案例   

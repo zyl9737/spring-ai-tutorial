@@ -10,10 +10,11 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.spring.ai.tutorial.advisor.memory</groupId>
-    <artifactId>advisor-memory-mysql</artifactId>
+    <groupId>com.spring.ai.tutorial.advisor.mem0</groupId>
+    <artifactId>advisor-memory-mem0</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -31,15 +32,10 @@
 
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
-            <artifactId>spring-ai-alibaba-starter-memory-jdbc</artifactId>
+            <artifactId>spring-ai-alibaba-starter-memory-mem0</artifactId>
+            <version>1.0.0.4-SNAPSHOT</version>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-        </dependency>
-
     </dependencies>
+
 
 </project>

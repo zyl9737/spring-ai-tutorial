@@ -53,6 +53,8 @@
         <module>graph/agent/reflection-agent</module>
         <module>graph/parallel-stream-node</module>
         <module>chat/chat-setting</module>
+        <module>advisor/advisor-memory-mem0</module>
+        <module>vector/vector-pgvector</module>
     </modules>
 
     <properties>
