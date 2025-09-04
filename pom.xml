@@ -31,7 +31,6 @@
         <module>mcp/server/mcp-nacos3-server</module>
         <module>mcp/client/mcp-nacos3-client</module>
         <module>rag/rag-evaluation</module>
-        <module>observability</module>
         <module>graph/stream-node</module>
         <module>graph/human-node</module>
         <module>graph/simple</module>
@@ -55,6 +54,8 @@
         <module>chat/chat-setting</module>
         <module>advisor/advisor-memory-mem0</module>
         <module>vector/vector-pgvector</module>
+        <module>observation/observability</module>
+        <module>observation/observability-langfuse</module>
     </modules>
 
     <properties>
