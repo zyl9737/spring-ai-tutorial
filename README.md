@@ -22,6 +22,7 @@ advisor目录
     - advisor-memory-sqlite         # 基于sqlite的advisor绑定内存记忆案例
     - advisor-memory-mysql          # 基于mysql的advisor绑定内存记忆案例
     - advisor-memory-redis          # 基于redis的advisor绑定内存记忆案例
+    - advisor-memory-neo4j          # 基于neo4j的advisor绑定内存记忆案例
     - advisor-memory-mem0(待补充)    # 基于mem0的advisor绑定内存记忆案例
 tool-calling                        # 时间、天气两个工具的Method版、Function版实现、internalToolExecutionEnabled、returnDirect设置
 structured-output                   # map、list、实例对象类型的格式化输出案例
