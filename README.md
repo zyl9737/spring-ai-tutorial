@@ -30,6 +30,7 @@ vector目录
     - vecotr-redis                  # 基于redis的向量数据库案例
     - vector-elasticsearch          # 基于ES的向量数据库案例
     - vector-pgvector               # 基于pgvector的向量数据库案例
+    - vector-neo4j                  # 基于neo4j的向量数据库案例
 rag目录                             
     - rag-simple                    # 基于内存的rag效果对比、模块化rag案例
     - rag-etl-pipeline              # 提取文档、转换文档、写出文档的案例   

@@ -103,6 +103,8 @@
     <file url="file://$PROJECT_DIR$/tool-calling/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vector/vector-elasticsearch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vector/vector-elasticsearch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vector/vector-neo4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vector/vector-neo4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vector/vector-pgvector/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vector/vector-pgvector/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/vector/vector-redis/src/main/java" charset="UTF-8" />
