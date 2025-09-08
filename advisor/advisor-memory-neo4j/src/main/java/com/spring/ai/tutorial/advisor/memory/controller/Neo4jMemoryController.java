@@ -2,9 +2,11 @@ package com.spring.ai.tutorial.advisor.memory.controller;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.chat.memory.repository.neo4j.Neo4jChatMemoryRepository;
 import org.springframework.ai.chat.messages.Message;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import static org.springframework.ai.chat.memory.ChatMemory.CONVERSATION_ID;
 
 /**
  * @author yingzi
@@ -26,7 +27,7 @@ public class Neo4jMemoryController {
     private final int MAX_MESSAGES = 100;
     private final MessageWindowChatMemory messageWindowChatMemory;
 
-    public Neo4jMemoryController(ChatClient.Builder builder,  Neo4jChatMemoryRepository neo4jChatMemoryRepository) {
+    public Neo4jMemoryController(ChatClient.Builder builder, @Qualifier("neo4jChatMemoryRepository2") Neo4jChatMemoryRepository neo4jChatMemoryRepository) {
         this.messageWindowChatMemory = MessageWindowChatMemory.builder()
                 .chatMemoryRepository(neo4jChatMemoryRepository)
                 .maxMessages(MAX_MESSAGES)
@@ -46,7 +47,7 @@ public class Neo4jMemoryController {
     ) {
         return chatClient.prompt(query)
                 .advisors(
-                        a -> a.param(CONVERSATION_ID, conversationId)
+                        a -> a.param(ChatMemory.CONVERSATION_ID, conversationId)
                 )
                 .call().content();
     }
