@@ -10,6 +10,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/advisor/advisor-memory-neo4j/pom.xml" />
         <option value="$PROJECT_DIR$/mcp/client/mcp-streamable-client/pom.xml" />
         <option value="$PROJECT_DIR$/mcp/server/mcp-webmvc-server/pom.xml" />
         <option value="$PROJECT_DIR$/observability/pom.xml" />

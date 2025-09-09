@@ -1,6 +1,5 @@
 package com.spring.ai.tutorial.advisor.memory.controller;
 
-
 import com.alibaba.cloud.ai.memory.mem0.advisor.Mem0ChatMemoryAdvisor;
 import com.alibaba.cloud.ai.memory.mem0.core.Mem0ServiceClient;
 import com.alibaba.cloud.ai.memory.mem0.model.Mem0ServerRequest;
@@ -45,7 +44,7 @@ public class Mem0MemoryController {
     }
 
     @GetMapping("/call")
-    public String call(@RequestParam(value = "message", defaultValue = "你好，我是万能的喵，我爱玩三角洲行动") String message,
+    public String call(@RequestParam(value = "query", defaultValue = "你好，我是万能的喵，我爱玩三角洲行动") String message,
                        @RequestParam(value = "user_id", defaultValue = "miao") String userId
     ) {
         return chatClient.prompt(message)

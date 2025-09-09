@@ -57,7 +57,6 @@
         <module>observation/observability</module>
         <module>observation/observability-langfuse</module>
         <module>vector/vector-neo4j</module>
-        <module>advisor/advisor-memory-neo4j</module>
     </modules>
 
     <properties>

@@ -19,9 +19,9 @@ spring:
             config:
               host: ${POSTGRES_HOST:postgres}
               port: ${POSTGRES_PORT:5432}
-              dbname: ${POSTGRES_DB:yingzi_db}
-              user: ${POSTGRES_USER:yingzi_user}
-              password: ${POSTGRES_PASSWORD:yingzi_password}
+              dbname: ${POSTGRES_DB:postgres}
+              user: ${POSTGRES_USER:postgres}
+              password: ${POSTGRES_PASSWORD:postgres}
               collection-name: ${POSTGRES_COLLECTION_NAME:memories}
           graph-store:
             provider: neo4j
