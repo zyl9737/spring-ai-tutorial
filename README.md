@@ -54,7 +54,7 @@ mcp目录
         - mcp-nacos-parse-swagger-server(待补充) # MCP基于nacos动态解析swagger的restful服务端案例
 ovservation目录
     - observabilty                              # ObservationHandler下的client、model、tool、embedding的观测案例
-    - observability-langfuse(待补充)             # 基于langfuse的观测案例
+    - observability-langfuse            # 基于langfuse的观测案例
 graph目录  # 基于spring ai alibaba graph内核
     - simple                        # 最简单的graph案例
     - stream-node                   # 节点中AI模型的流式输出案例
@@ -62,7 +62,7 @@ graph目录  # 基于spring ai alibaba graph内核
     - paraller-node                 # 多节点并行的案例
     - parallel-stream-node          # 多节点并行的流式输出案例
     - mcp-node                      # 配置指定mcp给指定node的案例
-    - observe-langfuse              # 基于langfuse观测graph案例
+    - observe-langfuse(待补充)       # 基于langfuse观测graph案例
     agent目录
         - react-agent               # 基于时间工具的React Agent案例
         - reflection-agent          # 基于反思机制的Reflection Agent案例
