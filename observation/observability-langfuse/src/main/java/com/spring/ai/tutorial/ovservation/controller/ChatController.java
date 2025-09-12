@@ -22,7 +22,7 @@ public class ChatController {
     }
 
     @GetMapping("/call")
-    public String call(@RequestParam(value = "query", defaultValue = "你好，很高兴认识你，能简单介绍一下自己吗？")String query) {
+    public String call(@RequestParam(value = "query", defaultValue = "你好，我的外号是影子，请记住呀！")String query) {
         return chatClient.prompt(query).call().content();
     }
 
