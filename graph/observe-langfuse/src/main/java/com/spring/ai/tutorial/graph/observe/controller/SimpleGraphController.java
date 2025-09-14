@@ -36,7 +36,7 @@ public class SimpleGraphController {
     }
 
     @GetMapping(value = "/expand")
-    public Map<String, Object> expand(@RequestParam(value = "query", defaultValue = "你好，很高兴认识你，能简单介绍一下自己吗？", required = false) String query,
+    public Map<String, Object> expand(@RequestParam(value = "query", defaultValue = "你好，我的外号是影子，请记住呀！", required = false) String query,
                                                 @RequestParam(value = "expander_number", defaultValue = "3", required = false) Integer  expanderNumber,
                                                 @RequestParam(value = "thread_id", defaultValue = "yingzi", required = false) String threadId) throws GraphRunnerException {
         RunnableConfig runnableConfig = RunnableConfig.builder().threadId(threadId).build();
