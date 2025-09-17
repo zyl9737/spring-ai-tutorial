@@ -57,6 +57,7 @@
         <module>observation/observability</module>
         <module>observation/observability-langfuse</module>
         <module>vector/vector-neo4j</module>
+        <module>mcp/server/mcp-auth-web-server</module>
     </modules>
 
     <properties>

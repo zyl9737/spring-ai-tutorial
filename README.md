@@ -49,7 +49,8 @@ mcp目录
         - mcp-stdio-server                      # MCP的stdio服务端案例
         - mcp-webflux-server                    # MCP的webflux服务端案例
         - mcp-nacos3-server                     # MCP基于Nacos3.*实现分布式部署服务端案例
-        - mcp-auth-server                       # MCP基于请求头的授权服务端
+        - mcp-auth-server                       # MCP基于请求头的授权服务端-工具粒度
+        - mcp-auth-web-server                   # MCP基于请求头的授权服务端-粒度
         - mcp-gateway-server                    # SAA的gateway服务零代码实现存量应用转换MCP案例
         - mcp-nacos-parse-swagger-server(待补充) # MCP基于nacos动态解析swagger的restful服务端案例
 ovservation目录
