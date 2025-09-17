@@ -1,4 +1,4 @@
-package com.spring.ai.tutorial.mcp.server.interceptor;
+package com.spring.ai.tutorial.mcp.server.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +13,12 @@ import reactor.core.publisher.Mono;
  * @since 2025/9/17
  */
 @Component
-public class McpServerInterceptor implements WebFilter {
+public class McpServerFilter implements WebFilter {
 
     private static final String TOKEN_HEADER = "token-yingzi-1";
     private static final String TOKEN_VALUE = "yingzi-1";
 
-    private static final Logger logger = LoggerFactory.getLogger(McpServerInterceptor.class);
+    private static final Logger logger = LoggerFactory.getLogger(McpServerFilter.class);
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
